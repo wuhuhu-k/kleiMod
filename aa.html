@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background: rgba(81, 226, 112, 0.5);
+      position: relative;
+    }
+    #kleiid {
+        border: none;
+    }
+  </style>
+  <body>
+    <div class="box">
+      <span>请输入您的Klei用户ID</span>
+      <input id="kleiid" type="text" name="" id="" />
+      <button id="searchBtn">查询</button>
+      <div id="result"></div>
+    </div>
+  </body>
+  <script>
+    init();
+
+    function init() {
+      const searchBtn = document.getElementById("searchBtn");
+      const kleiid = document.getElementById("kleiid");
+      const result = document.getElementById("result");
+      searchBtn.addEventListener("click", () => {
+        let code = encryptString(kleiid.value);
+        result.innerText = code;
+      });
+    }
+
+    // kleiID加密
+    function encryptString(str) {
+      function bitwiseAnd(a, b) {
+        let result = 0;
+        let bit = 1;
+        while (a > 0 || b > 0) {
+          if (a % 2 == 1 && b % 2 == 1) {
+            result = result + bit;
+          }
+          a = Math.floor(a / 2);
+          b = Math.floor(b / 2);
+          bit = bit * 2;
+        }
+        return result;
+      }
+      // 初始化一个变量用于存储加密结果
+      let encrypted = 0;
+      //遍历字符串中的每个字符
+      for (let i = 0; i < str.length; i++) {
+        // 获取当前字符的 ASCII 码
+        let charCode = str[i].charCodeAt(0);
+        // 进行位运算和求余操作
+        encrypted = (encrypted + charCode) * 7 + (charCode % 16);
+        // 对结果进行位运算，防止溢出
+        encrypted = bitwiseAnd(encrypted, 0xffffffff);
+      }
+
+      //将加密结果转换为字符串
+      let encryptedStr = encrypted.toString();
+      //提取前五位
+      let result = encryptedStr.substring(0, 5);
+
+      // 确保每一位都在 0 到 9 的范围内
+      let finalResult = "";
+      console.log(result, "result");
+
+      for (let i = 0; i < result.length; i++) {
+        let digit = Number(result.substring(i, i + 1));
+        // 如果当前位超出 0 到 9 的范围，取模转换
+        digit = digit % 10;
+        console.log(digit, "digit");
+        finalResult = `${finalResult}${digit.toString()}`;
+      }
+      return finalResult;
+    }
+  </script>
+</html>
