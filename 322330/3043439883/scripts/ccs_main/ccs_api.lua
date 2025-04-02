@@ -553,13 +553,13 @@ local function OnPutInInventory(fn_old)
         inst:DoTaskInTime(0, function()
             if owner ~= nil and owner.components.inventory ~= nil and owner:HasTag("player")then
 				if not owner:HasTag("ccs") and owner.components.inventory then
-					-- owner.components.inventory:DropItem(inst)
-					-- owner.components.talker:Say("这是小樱的东西")
+					owner.components.inventory:DropItem(inst)
+					owner.components.talker:Say("这是小樱的东西")
 				end
 				if inst.components.ccs_card_level then
 					if inst.components.ccs_card_level.masterid ~= nil and inst.components.ccs_card_level.masterid ~= owner.userid then
-						-- owner.components.inventory:DropItem(inst)
-						-- owner.components.talker:Say("这是别人的东西")
+						owner.components.inventory:DropItem(inst)
+						owner.components.talker:Say("这是别人的东西")
 					end
 				end
             end
@@ -1221,8 +1221,7 @@ AddStategraphPostInit("wilson", function(sg)
 		sg.events.attacked.fn = function(inst, data)
 			if inst.components.inventory then
 				local guard = inst.components.inventory:Has("ccs_guard",1)
-				local amulet = inst.components.inventory:Has("ccs_amulet",1)
-				if guard or amulet then
+				if guard then
 					return
 				end
 			end        
@@ -1238,8 +1237,7 @@ AddComponentPostInit("debuffable", function(self)
         if name then
 			if name == "mindcontroller" and self.inst.components.inventory then
 				local guard = self.inst.components.inventory:Has("ccs_guard",1)
-				local amulet = self.inst.components.inventory:Has("ccs_amulet",1)
-				if guard or amulet then
+				if guard then
 					return
 				end
 			end
@@ -1254,8 +1252,7 @@ AddComponentPostInit("grogginess", function(self)
 	self.AddGrogginess = function(self,grogginess,...)
 		if self.inst.components.inventory then
 			local guard = self.inst.components.inventory:Has("ccs_guard",1)
-            local amulet = self.inst.components.inventory:Has("ccs_amulet",1)
-			if guard or amulet then
+			if guard then
 				return
 			end
 		end

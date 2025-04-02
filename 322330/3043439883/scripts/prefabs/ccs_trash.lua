@@ -42,7 +42,7 @@ local function fn()
 
 	MakeSnowCoveredPristine(inst)
 
-	inst.Transform:SetScale(1.5, 1.5, 1.5)
+	inst.Transform:SetScale(2, 2, 2)
 
 	inst.entity:SetPristine()
 

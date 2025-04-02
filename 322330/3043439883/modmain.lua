@@ -73,8 +73,7 @@ PrefabFiles = {
 	"ccs_cookpot",
 	"ccs_cookpot2",
 	"ccs_lizifx_ranibowspark",
-	"ccs_lizifx_bubble",
-	"ccs_self_light"
+	"ccs_lizifx_bubble"
 }
 
 Assets = {
@@ -836,38 +835,3 @@ AddReplicableComponent("ccs_card_level")
 AddReplicableComponent("ccs_magic")
 AddReplicableComponent("ccs_flying")
 AddReplicableComponent("ccs_pack")
-
-
-
-local function setLight(inst)
-	local owner = inst.components.inventoryitem ~= nil and inst.components.inventoryitem.owner or nil
-
-	if owner ~= nil then
-		if inst._light ~= nil and inst._light:IsValid() then
-			inst._light.entity:SetParent(owner.entity)
-			if inst.components.equippable ~= nil and inst.components.equippable:IsEquipped() then
-				if TheWorld ~= nil and TheWorld.state ~= nil and TheWorld.state.isnight then
-					inst._light.Light:Enable(true)
-				else
-					inst._light.Light:Enable(false)
-				end
-			else
-				inst._light.Light:Enable(false)
-			end
-		end
-	else
-		if inst._light ~= nil and inst._light:IsValid() then
-			inst._light.entity:SetParent(inst.entity)
-			inst._light.Light:Enable(true)
-		end
-	end
-end
-
-local function onRemove(inst)
-	if inst._light ~= nil then
-		if inst._light:IsValid() then
-			inst._light:Remove()
-		end
-		inst._light = nil
-	end
-end

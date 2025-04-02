@@ -187,7 +187,7 @@ local function onsave(inst, data)
 	data.stone2 = inst.stone2
 end
 
-local scale = 1.5
+local scale = 2.2
 
 local function fn()
 	local inst = CreateEntity()
