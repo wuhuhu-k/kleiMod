@@ -1221,7 +1221,8 @@ AddStategraphPostInit("wilson", function(sg)
 		sg.events.attacked.fn = function(inst, data)
 			if inst.components.inventory then
 				local guard = inst.components.inventory:Has("ccs_guard",1)
-				if guard then
+				local amulet = inst.components.inventory:Has("ccs_amulet",1)
+				if guard or amulet then
 					return
 				end
 			end        
@@ -1237,7 +1238,8 @@ AddComponentPostInit("debuffable", function(self)
         if name then
 			if name == "mindcontroller" and self.inst.components.inventory then
 				local guard = self.inst.components.inventory:Has("ccs_guard",1)
-				if guard then
+				local amulet = self.inst.components.inventory:Has("ccs_amulet",1)
+				if guard or amulet then
 					return
 				end
 			end
@@ -1252,7 +1254,8 @@ AddComponentPostInit("grogginess", function(self)
 	self.AddGrogginess = function(self,grogginess,...)
 		if self.inst.components.inventory then
 			local guard = self.inst.components.inventory:Has("ccs_guard",1)
-			if guard then
+			local amulet = self.inst.components.inventory:Has("ccs_amulet",1)
+			if guard or amulet then
 				return
 			end
 		end

@@ -106,7 +106,10 @@ local VALID_CHEST_TYPES = {
     "chest_whitewood_big", 
     "chest_whitewood_big_inf", 
     "chest_whitewood_inf",
-    "hiddenmoonlight_inf"
+    "hiddenmoonlight_inf",
+    "ccs_treasurechest",
+    "ccs_chest2",
+    "ccs_chest3"
 }
 
 local BASIC_RESOURCES = {

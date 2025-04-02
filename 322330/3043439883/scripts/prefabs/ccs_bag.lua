@@ -113,6 +113,39 @@ local function onsave(inst, data)
 	data.bluegem = inst.bluegem
 end
 
+-- 来自佩奇神奇手杖2832720392灯光判定方法
+local function setLight(inst)
+	local owner = inst.components.inventoryitem ~= nil and inst.components.inventoryitem.owner or nil
+
+	if owner ~= nil then
+		if inst._light ~= nil and inst._light:IsValid() then
+			inst._light.entity:SetParent(owner.entity)
+			if inst.components.equippable ~= nil and inst.components.equippable:IsEquipped() then
+				if TheWorld ~= nil and TheWorld.state ~= nil and (TheWorld.state.isnight or TheWorld.state.isdusk) then
+					inst._light.Light:Enable(true)
+				else
+					inst._light.Light:Enable(false)
+				end
+			else
+				inst._light.Light:Enable(false)
+			end
+		end
+	else
+		if inst._light ~= nil and inst._light:IsValid() then
+			inst._light.entity:SetParent(inst.entity)
+			inst._light.Light:Enable(true)
+		end
+	end
+end
+local function onRemove(inst)
+	if inst._light ~= nil then
+		if inst._light:IsValid() then
+			inst._light:Remove()
+		end
+		inst._light = nil
+	end
+end
+
 local function fn(Sim)
 	local inst = CreateEntity()
 
@@ -169,6 +202,20 @@ local function fn(Sim)
 	
 	inst.OnSave = onsave
 	inst.OnPreLoad = onload
+
+	
+	inst._light = SpawnPrefab("ccs_self_light")
+	inst._light.entity:SetParent(inst.entity)
+
+	-- 增加灯光
+	inst:ListenForEvent("onputininventory", setLight)
+	inst:ListenForEvent("ondropped", setLight)
+	inst:ListenForEvent("equipped", setLight)
+	inst:ListenForEvent("unequipped", setLight)
+	inst:WatchWorldState("isnight", function(ent, isnight) setLight(ent) end)
+	inst:WatchWorldState("isdusk", function(ent, isdusk) setLight(ent) end)
+	inst:ListenForEvent("onremove", onRemove)
+	setLight(inst)
 	
 	MakeHauntableLaunchAndPerish(inst) 
     return inst
