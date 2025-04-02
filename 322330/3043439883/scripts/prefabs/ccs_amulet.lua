@@ -101,14 +101,14 @@ local function updatelight(inst, phase)
 				inst._light = nil    
             end
 	    end
-	elseif phase == "dusk" then   
-		if inst._light ~= nil then
-			if inst._light:IsValid() then
-				inst._light:Remove()
-				inst._light = nil
-			end
-		end
-	elseif phase == "night" then 
+	-- elseif phase == "dusk" then   
+	-- 	if inst._light ~= nil then
+	-- 		if inst._light:IsValid() then
+	-- 			inst._light:Remove()
+	-- 			inst._light = nil
+	-- 		end
+	-- 	end
+	elseif phase == "night" or phase == "dusk" then 
 		if inst._light == nil or not inst._light:IsValid() then    
 			inst._light = SpawnPrefab("ccs_light2_light") 
 			inst._light.entity:SetParent(inst.entity)    		  
@@ -288,10 +288,10 @@ local function light() --光的代码
     inst:AddTag("FX") --特效标签
 
 	inst.Light:Enable(true) --打开
-	inst.Light:SetRadius(8) --范围半径
+	inst.Light:SetRadius(10) --范围半径
 	inst.Light:SetFalloff(0.5) --削减
-	inst.Light:SetIntensity(.7) --强度
-	inst.Light:SetColour( 0/255, 92/255, 156/255, 1 ) --颜色
+	inst.Light:SetIntensity(.8) --强度
+	inst.Light:SetColour( 180/255, 195/255, 190/255, 1 ) --颜色
 
     inst.entity:SetPristine()
 
