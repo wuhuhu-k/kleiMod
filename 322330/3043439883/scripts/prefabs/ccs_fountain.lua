@@ -15,20 +15,20 @@ end
 
 local function Jt_Task(inst)
 	local pos = inst:GetPosition()
-	local ents = TheSim:FindEntities(pos.x, pos.y, pos.z,40,nil,{"campfire"}, { "fire","smolder" })
+	local ents = TheSim:FindEntities(pos.x, pos.y, pos.z,80,nil,{"campfire"}, { "fire","smolder" })
 	for i, v in ipairs(ents) do
 		if v.components.burnable ~= nil and v.prefab ~= "laozi_sp" and v.prefab ~= "book_myth" then
 			v.components.burnable:Extinguish()
 		end
 	end
-	local enta = TheSim:FindEntities(pos.x, pos.y, pos.z,40,nil,nil, { "witherable"})
+	local enta = TheSim:FindEntities(pos.x, pos.y, pos.z,80,nil,nil, { "witherable"})
 	for i, v in ipairs(enta) do
 		if v.components.witherable ~= nil then
 			v.components.witherable:Protect(60)
 		end
 	end
 	local x,y,z = inst:GetPosition():Get()
-	local ents = TheSim:FindEntities(x,y,z,30,nil,{"FX"})
+	local ents = TheSim:FindEntities(x,y,z,80,nil,{"FX"})
 	for k,v in pairs(ents) do
 		if v and v.components then
             if v.components.crop then
