@@ -113,6 +113,40 @@ local function onsave(inst, data)
 	data.bluegem = inst.bluegem
 end
 
+-- 佩奇手杖代码
+local function setLight(inst)
+	local owner = inst.components.inventoryitem ~= nil and inst.components.inventoryitem.owner or nil
+
+	if owner ~= nil then
+		if inst._light ~= nil and inst._light:IsValid() then
+			inst._light.entity:SetParent(owner.entity)
+			if inst.components.equippable ~= nil and inst.components.equippable:IsEquipped() then
+				if TheWorld ~= nil and TheWorld.state ~= nil and (TheWorld.state.isnight or TheWorld.state.isdusk) then
+					inst._light.Light:Enable(true)
+				else
+					inst._light.Light:Enable(false)
+				end
+			else
+				inst._light.Light:Enable(false)
+			end
+		end
+	else
+		if inst._light ~= nil and inst._light:IsValid() then
+			inst._light.entity:SetParent(inst.entity)
+			inst._light.Light:Enable(true)
+		end
+	end
+end
+
+local function onRemove(inst)
+	if inst._light ~= nil then
+		if inst._light:IsValid() then
+			inst._light:Remove()
+		end
+		inst._light = nil
+	end
+end
+
 local function fn(Sim)
 	local inst = CreateEntity()
 
@@ -169,9 +203,48 @@ local function fn(Sim)
 	
 	inst.OnSave = onsave
 	inst.OnPreLoad = onload
+
+	
+	inst._light = SpawnPrefab("ccs_bag_light")
+	inst._light.entity:SetParent(inst.entity)
+
+	inst:ListenForEvent("onputininventory", setLight)
+	inst:ListenForEvent("ondropped", setLight)
+	inst:ListenForEvent("equipped", setLight)
+	inst:ListenForEvent("unequipped", setLight)
+	inst:WatchWorldState("isnight", function(ent, isnight) setLight(ent) end)
+	inst:WatchWorldState("isdusk", function(ent, isnight) setLight(ent) end)
+	inst:ListenForEvent("onremove", onRemove)
 	
 	MakeHauntableLaunchAndPerish(inst) 
     return inst
 end 
+
+local function light() --光的代码
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddLight()
+    inst.entity:AddNetwork()
+
+    inst:AddTag("FX") --特效标签
+
+	inst.Light:Enable(true) --打开
+	inst.Light:SetRadius(20) --范围半径
+	inst.Light:SetFalloff(0.5) --削减
+	inst.Light:SetIntensity(.7) --强度
+	inst.Light:SetColour( 177/255, 0/255, 255/255, 1 ) --颜色
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+	
+    inst.persists = false 
+	
+    return inst
+end 
     
-return Prefab( "ccs_bag", fn, assets) 
+return Prefab( "ccs_bag", fn, assets),
+		Prefab("ccs_bag_light", light)
