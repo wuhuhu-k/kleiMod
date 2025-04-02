@@ -143,7 +143,7 @@ local function MakeCcs_Light(name, client_postinit, master_postinit, constructio
 	
 		inst.MiniMapEntity:SetIcon( "ccs_light.tex" )
 		
-		inst.Transform:SetScale(2, 2, 2)
+		inst.Transform:SetScale(1.5, 1.5, 1.5)
         if construction_data then
             inst.level = construction_data.level
         else

@@ -164,7 +164,7 @@ Ccs_foods = {
 		--草莓双皮奶
 		name = "ccs_strawberry_food1",
 		test = function(cooker, names, tags)
-			return names.ccs_strawberry_food and names.ccs_strawberry_food == 2 and names.goatmilk
+			return names.ccs_strawberry_food and (names.tallbirdegg or names.bird_egg) and names.ice
 		end,
 		priority = 99, -- 食谱优先级
 		weight = 1, -- 食谱权重
@@ -190,13 +190,14 @@ Ccs_foods = {
 		--草莓大福
 		name = "ccs_strawberry_food2",
 		test = function(cooker, names, tags)
-			return names.ccs_strawberry_food and names.goatmilk and names.honey and names.ccs_magic_water
+			return names.berries and names.potato and names.tomato and 
+			(names.petals or names.petals_rose or names.petals_orchid or names.petals_lily)
 		end,
 		priority = 99, -- 食谱优先级
 		weight = 1, -- 食谱权重
-		foodtype = FOODTYPE.GOODIES, 
+		foodtype = FOODTYPE.GOODIES,  
 		health = 30, 
-		hunger = 30, 
+		hunger = 120, 
 		sanity = 30, 
 		perishtime = 7200,
 		cooktime = 2,
@@ -254,7 +255,10 @@ Ccs_foods = {
 		--魔法奶茶
 		name = "ccs_tea1",
 		test = function(cooker, names, tags)
-			return names.goatmilk and names.goatmilk == 2 and names.ccs_magic_water and tags.sakura == 1
+			return (names.petals and names.petals == 2 or
+			names.petals_rose and names.petals_rose == 2 or
+			names.petals_orchid and names.petals_orchid == 2 or
+			names.petals_lily and names.petals_lily == 2 ) and names.ice and tags.sakura == 1
 		end,
 		priority = 99, -- 食谱优先级
 		weight = 1, -- 食谱权重

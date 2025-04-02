@@ -160,13 +160,13 @@ TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true})
 AddRecipe2("ccs_frog_yf", {Ingredient("froglegs",15),Ingredient("log",50),Ingredient("tentaclespots",2),Ingredient("rope",10),},  
 TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true})
 
-AddRecipe2("ccs_crystallization1", {Ingredient("orangegem",5)},  
+AddRecipe2("ccs_crystallization1", {Ingredient("orangegem",1)},  
 TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true})
 
-AddRecipe2("ccs_crystallization2", {Ingredient("bluegem",5)},  
+AddRecipe2("ccs_crystallization2", {Ingredient("bluegem",1)},  
 TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true})
 
-AddRecipe2("ccs_crystallization3", {Ingredient("nightmarefuel",5)},  
+AddRecipe2("ccs_crystallization3", {Ingredient("nightmarefuel",1)},  
 TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true})
 
 AddRecipe2("ccs_beebox", {Ingredient("honeycomb",2),Ingredient("bee",8),Ingredient("petals",20)},  
@@ -191,10 +191,10 @@ image = "ccs_strawberry_seeds.tex",atlas = "images/inventoryimages/ccs_strawberr
 AddRecipe2("ccs_street_lamp", {Ingredient("fireflies",5),Ingredient("cutstone",3),Ingredient("petals",3)},  
 TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true,placer = "ccs_street_lamp_placer", min_spacing=2})
 
-AddRecipe2("ccs_sakura_tree", {Ingredient("redgem",5),Ingredient("yellowgem",3),Ingredient("boards",20),Ingredient("transistor",10)},  
+AddRecipe2("ccs_sakura_tree", {Ingredient("boards",20),Ingredient("transistor",10)},  
 TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true,placer = "ccs_sakura_tree_placer", min_spacing=2})
 
-AddRecipe2("ccs_light3", {Ingredient("cutstone",5),Ingredient("boards",5),Ingredient("goldnugget",100)},  
+AddRecipe2("ccs_light3", {Ingredient("cutstone",5),Ingredient("boards",5),Ingredient("goldnugget",10)},  
 TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true,placer = "ccs_light3_placer", min_spacing=2})
 
 AddRecipe2("ccs_ice_box_piano", {Ingredient("bluemooneye",2),Ingredient("boards",10),Ingredient("transistor",10)},  
@@ -203,7 +203,7 @@ TECH.CCS_PIANO_ONE, {nounlock = false,product = "ccs_ice_box", no_deconstruction
 AddRecipe2("ccs_chest2_piano", {Ingredient("bluegem",4),Ingredient("transistor",5),Ingredient("boards",5)},  
 TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true,placer = "ccs_chest2_placer",product = "ccs_chest2", min_spacing=1})
 
-AddRecipe2("ccs_chest3", {Ingredient("redgem",3),Ingredient("livinglog",10),Ingredient("nightmarefuel",10)},  
+AddRecipe2("ccs_chest3", {Ingredient("livinglog",10),Ingredient("nightmarefuel",10)},  
 TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true,placer = "ccs_chest3_placer", min_spacing=1})
 
 AddRecipe2("ccs_oven", {Ingredient("yellowstaff",1),Ingredient("opalstaff",1),Ingredient("boards",10),Ingredient("cutstone",10)},  
@@ -215,7 +215,7 @@ TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true,placer = "ccs_ten
 AddRecipe2("ccs_trash", {Ingredient("cutstone", 10 ),Ingredient("boards",10)},  
 TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true,placer = "ccs_trash_placer", min_spacing=3})    
 
-AddRecipe2("ccs_fountain", {Ingredient("opalpreciousgem",1),Ingredient("transistor",20),Ingredient("boards",20),Ingredient("cutstone",20)},  
+AddRecipe2("ccs_fountain", {Ingredient("transistor",20),Ingredient("boards",20),Ingredient("cutstone",20)},  
 TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true,placer = "ccs_fountain_placer", min_spacing=3})  
 
 AddRecipe2("wall_ccs_wall1_item", {Ingredient("marble",3),Ingredient("petals",1)},  
@@ -223,7 +223,7 @@ TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true,numtogive = 3,atl
 
 --栅栏
 RegisterInventoryItemAtlas("images/inventoryimages/fence_ccsstrawberry_item.xml","fence_ccsstrawberry_item.tex")
-AddRecipe2("fence_ccsstrawberry_item", {Ingredient("ccs_strawberry_food",10),Ingredient("boards",2),Ingredient("petals",10)},  
+AddRecipe2("fence_ccsstrawberry_item", {Ingredient("ccs_strawberry_food",1),Ingredient("boards",2),Ingredient("petals",10)},  
 TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true,numtogive = 4,atlas = "images/inventoryimages/fence_ccsstrawberry_item.xml", image = "fence_ccsstrawberry_item.tex",})
 
 --地皮
@@ -246,12 +246,12 @@ TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true,placer = "ccs_thr
 
 --箱子
 RegisterInventoryItemAtlas("images/inventoryimages/ccs_treasurechest.xml","ccs_treasurechest.tex")
-AddRecipe2("ccs_treasurechest", {Ingredient("boards", 20)},
+AddRecipe2("ccs_treasurechest", {Ingredient("boards", 2)},
 TECH.CCS_PIANO_ONE, {nounlock = false, no_deconstruction = true, placer = "ccs_treasurechest_placer", min_spacing=1.5})
 
 --花盆
 RegisterInventoryItemAtlas("images/inventoryimages/ccs_flowerpot.xml","ccs_flowerpot.tex")
-AddRecipe2("ccs_flowerpot", {Ingredient("cutstone", 2), Ingredient("petals", 10)},
+AddRecipe2("ccs_flowerpot", {Ingredient("cutstone", 2), Ingredient("petals", 1)},
 TECH.CCS_PIANO_ONE, {nounlock = false, no_deconstruction = true, placer = "ccs_flowerpot_placer", min_spacing=1.5})
 
 --月亮椅子
@@ -285,7 +285,7 @@ AddRecipe2("ccs_magic_wand1", {Ingredient("golden_farm_hoe",4),Ingredient("golde
 TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
 
 AddRecipe2("ccs_magic_wand2", {Ingredient("goldenaxe",2),Ingredient("goldenpickaxe",2),
-	Ingredient("golden_farm_hoe",2),Ingredient("goldenshovel",2),Ingredient("purplegem",1),Ingredient("orangegem",1),Ingredient("yellowgem",1)},  
+	Ingredient("golden_farm_hoe",2),Ingredient("goldenshovel",2)},  
 TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true,},{ccs_tab1})
 
 --星星法杖
@@ -356,13 +356,13 @@ TECH.SCIENCE_ONE, {builder_tag= "ccs", product = "pocketwatch_revive"},{ccs_tab1
 AddRecipe2("ccs_skirt1", {Ingredient("armorruins",2),Ingredient("ruins_bat",1),Ingredient("armordragonfly",1),Ingredient("armormarble",1),Ingredient("armor_sanity",1)},  
 TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
 
-AddRecipe2("ccs_amulet", {Ingredient("glommerflower",3),Ingredient("lavae_egg",1),Ingredient("yellowgem",5)},  
+AddRecipe2("ccs_amulet", {Ingredient("glommerflower",3),Ingredient("lavae_egg",1),Ingredient("reviver",5)},  
 TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
         
 --[[AddRecipe2("ccs_light", {Ingredient(CHARACTER_INGREDIENT.CCS_MAGIC, 100 ,"images/inventoryimages/ccs_magic.xml"),Ingredient("ccs_cards_7",5,"images/inventoryimages/ccs_cards/ccs_cards_7.xml"),Ingredient("boards",10),Ingredient("goldnugget",20)},  
 TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true,placer = "ccs_light_placer", min_spacing=3},{ccs_tab1})  --]]
 
-CONSTRUCTION_PLANS["ccs_light"] = {Ingredient("ccs_cards_7",3,"images/inventoryimages/ccs_cards/ccs_cards_7.xml"),Ingredient("boards",10),Ingredient("goldnugget",20)}
+CONSTRUCTION_PLANS["ccs_light"] = {Ingredient("boards",10),Ingredient("goldnugget",20)}
 CONSTRUCTION_PLANS["ccs_sakura_tree"] = {Ingredient("ccs_sakura1",20,"images/inventoryimages/ccs_sakura1.xml"),Ingredient("ccs_sakura3",20,"images/inventoryimages/ccs_sakura3.xml"),Ingredient("livinglog",20)}
 
 AddRecipe2("ccs_cards_7", {Ingredient("ccs_paper",3,"images/inventoryimages/ccs_paper.xml")},  

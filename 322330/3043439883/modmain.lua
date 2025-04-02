@@ -73,7 +73,8 @@ PrefabFiles = {
 	"ccs_cookpot",
 	"ccs_cookpot2",
 	"ccs_lizifx_ranibowspark",
-	"ccs_lizifx_bubble"
+	"ccs_lizifx_bubble",
+	"css_wuhuhu_light"
 }
 
 Assets = {
