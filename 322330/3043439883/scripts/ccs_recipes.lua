@@ -200,7 +200,7 @@ TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true,placer = "ccs_lig
 AddRecipe2("ccs_ice_box_piano", {Ingredient("bluemooneye",2),Ingredient("boards",10),Ingredient("transistor",10)},  
 TECH.CCS_PIANO_ONE, {nounlock = false,product = "ccs_ice_box", no_deconstruction = true},{"CRAFTING_STATION"})
 
-AddRecipe2("ccs_chest2_piano", {Ingredient("bluegem",4),Ingredient("transistor",5),Ingredient("boards",5)},  
+AddRecipe2("ccs_chest2_piano", {Ingredient("transistor",5),Ingredient("boards",5)},  
 TECH.CCS_PIANO_ONE, {nounlock = false,no_deconstruction = true,placer = "ccs_chest2_placer",product = "ccs_chest2", min_spacing=1})
 
 AddRecipe2("ccs_chest3", {Ingredient("livinglog",10),Ingredient("nightmarefuel",10)},  
