@@ -150,17 +150,6 @@ for k,v in pairs(piano_tech) do
 	AddRecipeToFilter(v,"CCS_PIANO_TECH")
 end
 
--- 放开沃姆伍德 泄根糖浆制作
--- Recipe2("ipecacsyrup",{Ingredient("red_cap", 1), Ingredient("honey", 1), Ingredient("spoiled_food", 1)},			
--- TECH.NONE,	{builder_skill="wormwood_syrupcrafting", allowautopick=true})
-Recipe2("ipecacsyrup",{Ingredient("red_cap", 1), Ingredient("honey", 1), Ingredient("spoiled_food", 1)},TECH.NONE,	{nounlock = false,no_deconstruction = true})
-Recipe2("transmute_bluegem",{Ingredient("greengem", 1)}, 	TECH.NONE,{product="bluegem", image="bluegem.tex", description="transmute_bluegem"})
-Recipe2("transmute_redgem",{Ingredient("bluegem", 1)}, TECH.NONE,{product="redgem", image="redgem.tex", description="transmute_redgem"})
-Recipe2("transmute_purplegem",{Ingredient("redgem", 1)}, TECH.NONE, {product="purplegem", image="purplegem.tex", description="transmute_purplegem"})
-Recipe2("transmute_orangegem",{Ingredient("purplegem", 1)}, TECH.NONE,{product="orangegem", image="orangegem.tex", description="transmute_orangegem"})
-Recipe2("transmute_yellowgem",{Ingredient("orangegem", 1)}, TECH.NONE,{product="yellowgem", image="yellowgem.tex", description="transmute_yellowgem"})
-Recipe2("transmute_greengem",{Ingredient("yellowgem", 1)}, TECH.NONE,{product="greengem", image="greengem.tex", description="transmute_greengem"})
---放开结束
 
 --钢琴配方
 AddRecipe2("ccs_magic_wand1_piano", {Ingredient("golden_farm_hoe",4),Ingredient("goldenshovel",4),Ingredient("hammer",4)},  

@@ -55,7 +55,7 @@ if TUNING.GAMEMODE_STARTING_ITEMS then
 	end
 	TUNING.STARTING_ITEM_IMAGE_OVERRIDE.ccs_bag =  {atlas = "images/inventoryimages/ccs_bag.xml", image = "ccs_bag.tex" }
 
-	TUNING.CCS_HEALTH = 100
+	TUNING.CCS_HEALTH = 150
 	TUNING.CCS_HUNGER = 150
 	TUNING.CCS_SANITY = 150
 end

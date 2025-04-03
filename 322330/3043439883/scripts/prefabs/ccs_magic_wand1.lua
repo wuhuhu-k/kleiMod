@@ -26,6 +26,30 @@ local function onunequip(inst, owner) --解除装备
     owner.AnimState:Hide("ARM_carry")
     owner.AnimState:Show("ARM_normal")
 end
+-- 快速收集功能  来自樱花法杖ccs_magic_wand2
+local function onuse(inst)
+	local owner = inst.components.inventoryitem.owner
+	if owner then
+		if inst:HasTag("enble_spell") then
+			owner.components.talker:Say("关闭采集功能")
+			inst.components.spellcaster.spell = nil
+			inst:RemoveTag("enble_spell") 
+			inst:AddTag("HAMMER_tool")
+			inst:AddTag("DIG_tool")
+			inst:AddComponent("fishingrod")
+			inst.components.fishingrod:SetWaitTimes(1, 2)
+			inst.components.fishingrod:SetStrainTimes(10, 20)
+		else
+			owner.components.talker:Say("启用采集功能")
+			inst:RemoveComponent("fishingrod")
+			inst.components.spellcaster:SetSpellFn(ccs_spell)
+			inst:AddTag("enble_spell")
+			inst:RemoveTag("HAMMER_tool")
+			inst:RemoveTag("DIG_tool")
+		end
+	end
+	return false
+end
 
 local function fn(Sim)
 	local inst = CreateEntity()
@@ -93,6 +117,10 @@ local function fn(Sim)
 		end
 		return true
 	end
+
+	-- 补全相较于樱花法杖缺失功能(收集)
+	inst:AddComponent("useableitem")  	
+	inst.components.useableitem:SetOnUseFn(onuse) 
 	
 	--钓鱼
    	inst:AddComponent("fishingrod")
