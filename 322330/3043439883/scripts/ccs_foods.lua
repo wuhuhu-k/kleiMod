@@ -277,6 +277,9 @@ Ccs_foods = {
 				eater.ccs_tea1:Cancel()
 				eater.ccs_tea1 = nil
 			end
+			if eater and eater.components.ccs_magic ~= nil then
+				eater.components.ccs_magic:DoDelta(100)
+			end
 			eater.components.combat.externaldamagemultipliers:SetModifier("ccs_tea1", 1.3) 	
 			eater.ccs_tea1 = eater:DoTaskInTime(480,function()
 				eater.components.combat.externaldamagemultipliers:RemoveModifier("ccs_tea1")
