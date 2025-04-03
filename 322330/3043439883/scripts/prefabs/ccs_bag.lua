@@ -230,10 +230,10 @@ local function light() --光的代码
     inst:AddTag("FX") --特效标签
 
 	inst.Light:Enable(true) --打开
-	inst.Light:SetRadius(20) --范围半径
+	inst.Light:SetRadius(15) --范围半径
 	inst.Light:SetFalloff(0.5) --削减
-	inst.Light:SetIntensity(.7) --强度
-	inst.Light:SetColour( 177/255, 0/255, 255/255, 1 ) --颜色
+	inst.Light:SetIntensity(0.8) --强度
+	inst.Light:SetColour(180 / 255, 195 / 255, 150 / 255) --颜色
 
     inst.entity:SetPristine()
 

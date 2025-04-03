@@ -348,10 +348,10 @@ local function fn(Sim)
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/ccs_magic_wand2.xml"
       
 	inst:AddComponent("tool")
-    inst.components.tool:SetAction(ACTIONS.HAMMER, 10)  --锤子
-	inst.components.tool:SetAction(ACTIONS.DIG, 15)     --铲子
+    inst.components.tool:SetAction(ACTIONS.HAMMER)  --锤子
+	inst.components.tool:SetAction(ACTIONS.DIG)  --铲子
     inst.components.tool:SetAction(ACTIONS.CHOP,15)  --砍树
-    inst.components.tool:SetAction(ACTIONS.MINE,10)   --挖矿
+    inst.components.tool:SetAction(ACTIONS.MINE,10)  --挖矿
 	inst.components.tool:SetAction(ACTIONS.NET)  --捕虫网
 	inst.components.tool:EnableToughWork(true)
 	

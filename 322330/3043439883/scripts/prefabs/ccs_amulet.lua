@@ -291,7 +291,7 @@ local function light() --光的代码
 	inst.Light:SetRadius(8) --范围半径
 	inst.Light:SetFalloff(0.5) --削减
 	inst.Light:SetIntensity(.7) --强度
-	inst.Light:SetColour( 0/255, 92/255, 156/255, 1 ) --颜色
+	inst.Light:SetColour(180 / 255, 195 / 255, 150 / 255) --颜色
 
     inst.entity:SetPristine()
 
