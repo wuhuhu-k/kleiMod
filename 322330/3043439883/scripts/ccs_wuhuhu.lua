@@ -59,6 +59,26 @@ for i = 1, #respawnThing do
     end)
 end
 
+-- 去除耐久
+AddPrefabPostInit("spear_wathgrithr", function(inst)
+    if not GLOBAL.TheWorld.ismastersim then
+        return
+    end
+    if inst.components.finiteuses then
+        inst:RemoveComponent("finiteuses")
+    end
+end)
+-- 去除耐久
+AddPrefabPostInit("spear_wathgrithr_lightning", function(inst)
+    if not GLOBAL.TheWorld.ismastersim then
+        return
+    end
+    if inst.components.finiteuses then
+        inst:RemoveComponent("finiteuses")
+    end
+end)
+
+
 -- local function IsLifeDrainable(target)
 -- 	return not target:HasAnyTag(NON_LIFEFORM_TARGET_TAGS) or target:HasTag("lifedrainable")
 -- end

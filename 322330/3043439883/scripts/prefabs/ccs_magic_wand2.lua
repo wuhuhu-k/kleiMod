@@ -354,6 +354,20 @@ local function fn(Sim)
     inst.components.tool:SetAction(ACTIONS.MINE,10)  --挖矿
 	inst.components.tool:SetAction(ACTIONS.NET)  --捕虫网
 	inst.components.tool:EnableToughWork(true)
+
+    --自动照料作物
+    inst:DoPeriodicTask(1, function()
+        local PEPPAZHAOLIAO = 32
+        local x, y, z = inst.Transform:GetWorldPosition() -- 获取实体坐标
+        local ens = TheSim:FindEntities(x, 0, z, PEPPAZHAOLIAO, nil, {"INLIMBO"})
+            for i, v in ipairs(ens) do
+                if v.components.farmplanttendable ~= nil then
+                   v.components.farmplanttendable:TendTo(inst)
+                end
+
+            end	
+    end)
+    -- end
 	
 	inst:AddComponent("useableitem")  	
 	inst.components.useableitem:SetOnUseFn(onuse) 
@@ -378,6 +392,16 @@ local function fn(Sim)
 		end
 		return true
 	end
+
+    -- 浇水壶
+    if not inst.components.wateryprotection then
+        inst:AddComponent("wateryprotection")
+    end
+    inst:AddTag("wateringcan")
+    inst.components.wateryprotection.addwetness = TUNING.WATERINGCAN_WATER_AMOUNT * 4--加湿
+    inst.components.wateryprotection.temperaturereduction = TUNING.WATERINGCAN_TEMP_REDUCTION*10
+    inst.components.wateryprotection:AddIgnoreTag("player")
+    -- 浇水壶结束
 	
 	--钓鱼
    	inst:AddComponent("fishingrod")
