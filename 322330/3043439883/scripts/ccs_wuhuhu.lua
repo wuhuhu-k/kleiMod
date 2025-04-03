@@ -44,7 +44,8 @@ Recipe2("battlesong_instant_panic",
 
 
 -- 增加部分物品 作祟复活
-local respawnThing = { "ccs_amulet", 'ccs_magic_wand3', 'ccs_starstaff', 'ccs_magic_wand2', 'spear_wathgrithr', 'spear_wathgrithr_lightning' }
+local respawnThing = { "ccs_amulet", 'ccs_magic_wand3', 'ccs_starstaff', 'ccs_magic_wand2', 'spear_wathgrithr',
+    'spear_wathgrithr_lightning' }
 for i = 1, #respawnThing do
     AddPrefabPostInit(respawnThing[i], function(inst)
         if not TheWorld.ismastersim then
@@ -58,33 +59,31 @@ for i = 1, #respawnThing do
     end)
 end
 
--- local function onattack(inst, owner, target)
--- 	if owner.components.health and owner.components.health:IsHurt() and IsLifeDrainable(target) then
---         -- 残血会回血
---         owner.components.health:DoDelta(TUNING.BATBAT_DRAIN, false, "batbat")
--- 		-- if owner.components.sanity ~= nil then
--- 	    --     owner.components.sanity:DoDelta(-.5 * TUNING.BATBAT_DRAIN)
--- 		-- end
---     end
--- 	if owner.components.health and owner.components.health:IsHurt() and IsLifeDrainable(target) then
---         -- 残血会回血
---         owner.components.health:DoDelta(TUNING.BATBAT_DRAIN, false, "batbat")
--- 		-- if owner.components.sanity ~= nil then
--- 	    --     owner.components.sanity:DoDelta(-.5 * TUNING.BATBAT_DRAIN)
--- 		-- end
---     end
--- end
+local function onattack(inst, owner, target)
+    if owner.components.health and owner.components.health:IsHurt() and IsLifeDrainable(target) then
+        -- 残血会回血
+        owner.components.health:DoDelta(TUNING.BATBAT_DRAIN, false, "batbat")
+        -- if owner.components.sanity ~= nil then
+        --     owner.components.sanity:DoDelta(-.5 * TUNING.BATBAT_DRAIN)
+        -- end
+    end
+    -- if owner.components.sanity and owner.components.health:IsHurt() and IsLifeDrainable(target) then
+    --     -- 残血会回血
+    --     owner.components.health:DoDelta(TUNING.BATBAT_DRAIN, false, "batbat")
+    --     -- if owner.components.sanity ~= nil then
+    --     --     owner.components.sanity:DoDelta(-.5 * TUNING.BATBAT_DRAIN)
+    --     -- end
+    -- end
+end
 
--- AddPrefabPostInit('spear_wathgrithr', function(inst)
---     if not TheWorld.ismastersim then
---         return inst
---     end
---     if inst.components.hauntable then
---         inst.components.hauntable.DoHaunt = function(self, doer)
---             doer:PushEvent("respawnfromghost", { source = self.inst })
---         end
---     end
--- end)
+AddPrefabPostInit('spear_wathgrithr', function(inst)
+    if not TheWorld.ismastersim then
+        return inst
+    end
+    inst:AddComponent("weapon")
+    inst.components.weapon:SetDamage(TUNING.BATBAT_DAMAGE)
+    inst.components.weapon.onattack = onattack
+end)
 
 -- AddPrefabPostInit("cane",
 -- 	function(inst)
