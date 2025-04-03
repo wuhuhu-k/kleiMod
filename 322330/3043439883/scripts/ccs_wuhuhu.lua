@@ -59,25 +59,25 @@ for i = 1, #respawnThing do
     end)
 end
 
-local function IsLifeDrainable(target)
-	return not target:HasAnyTag(NON_LIFEFORM_TARGET_TAGS) or target:HasTag("lifedrainable")
-end
+-- local function IsLifeDrainable(target)
+-- 	return not target:HasAnyTag(NON_LIFEFORM_TARGET_TAGS) or target:HasTag("lifedrainable")
+-- end
 
-local function onattack(inst, owner, target)
-    if owner.components.health and owner.components.health:IsHurt() and IsLifeDrainable(target) then
-        -- 残血会回血
-        owner.components.health:DoDelta(TUNING.BATBAT_DRAIN, false, "batbat")
-    end
-end
+-- local function onattack(inst, owner, target)
+--     if owner.components.health and owner.components.health:IsHurt() and IsLifeDrainable(target) then
+--         -- 残血会回血
+--         owner.components.health:DoDelta(TUNING.BATBAT_DRAIN, false, "batbat")
+--     end
+-- end
 
-AddPrefabPostInit('spear_wathgrithr', function(inst)
-    if not TheWorld.ismastersim then
-        return inst
-    end
-    inst:AddComponent("weapon")
-    inst.components.weapon:SetDamage(TUNING.BATBAT_DAMAGE)
-    inst.components.weapon.onattack = onattack
-end)
+-- AddPrefabPostInit('spear_wathgrithr', function(inst)
+--     if not TheWorld.ismastersim then
+--         return inst
+--     end
+--     inst:AddComponent("weapon")
+--     inst.components.weapon:SetDamage(TUNING.BATBAT_DAMAGE)
+--     inst.components.weapon.onattack = onattack
+-- end)
 
 -- AddPrefabPostInit("cane",
 -- 	function(inst)
