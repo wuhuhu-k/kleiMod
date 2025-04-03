@@ -59,21 +59,15 @@ for i = 1, #respawnThing do
     end)
 end
 
+local function IsLifeDrainable(target)
+	return not target:HasAnyTag(NON_LIFEFORM_TARGET_TAGS) or target:HasTag("lifedrainable")
+end
+
 local function onattack(inst, owner, target)
     if owner.components.health and owner.components.health:IsHurt() and IsLifeDrainable(target) then
         -- 残血会回血
         owner.components.health:DoDelta(TUNING.BATBAT_DRAIN, false, "batbat")
-        -- if owner.components.sanity ~= nil then
-        --     owner.components.sanity:DoDelta(-.5 * TUNING.BATBAT_DRAIN)
-        -- end
     end
-    -- if owner.components.sanity and owner.components.health:IsHurt() and IsLifeDrainable(target) then
-    --     -- 残血会回血
-    --     owner.components.health:DoDelta(TUNING.BATBAT_DRAIN, false, "batbat")
-    --     -- if owner.components.sanity ~= nil then
-    --     --     owner.components.sanity:DoDelta(-.5 * TUNING.BATBAT_DRAIN)
-    --     -- end
-    -- end
 end
 
 AddPrefabPostInit('spear_wathgrithr', function(inst)
