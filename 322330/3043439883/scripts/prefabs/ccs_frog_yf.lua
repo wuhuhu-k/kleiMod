@@ -49,6 +49,10 @@ local function fn()
         return inst
     end
 
+    -- 增加背包同款发光
+    inst._light = SpawnPrefab("ccs_bag_light")
+	inst._light.entity:SetParent(inst.entity)
+
     inst:AddComponent("inspectable") 
 
     inst:AddComponent("inventoryitem")
