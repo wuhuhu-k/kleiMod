@@ -78,6 +78,15 @@ AddPrefabPostInit("spear_wathgrithr_lightning", function(inst)
     end
 end)
 
+-- 女武神属性修改
+TUNING.WATHGRITHR_SANITY = 120
+TUNING.WATHGRITHR_HUNGER = 150
+TUNING.INSPIRATION_DRAIN_RATE = 1
+
+
+
+
+
 
 -- local function IsLifeDrainable(target)
 -- 	return not target:HasAnyTag(NON_LIFEFORM_TARGET_TAGS) or target:HasTag("lifedrainable")

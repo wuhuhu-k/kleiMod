@@ -48,7 +48,7 @@ local function fn(Sim)
     inst:AddComponent("inspectable") 
 	
 	inst:AddComponent("prototyper")
-	inst.components.prototyper.trees = TechTree.Create({CCS_PIANO = 4,SCIENCE = 5})
+	inst.components.prototyper.trees = TechTree.Create({CCS_PIANO = 4,SCIENCE = 5,ANCIENT = 6})
 	
 	MakeHauntableLaunchAndPerish(inst) 
     return inst
