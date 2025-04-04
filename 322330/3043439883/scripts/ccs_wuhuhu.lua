@@ -68,15 +68,15 @@ AddPrefabPostInit("spear_wathgrithr", function(inst)
         inst:RemoveComponent("finiteuses")
     end
 end)
--- 去除耐久
-AddPrefabPostInit("spear_wathgrithr_lightning", function(inst)
-    if not GLOBAL.TheWorld.ismastersim then
-        return
-    end
-    if inst.components.finiteuses then
-        inst:RemoveComponent("finiteuses")
-    end
-end)
+-- -- 去除耐久
+-- AddPrefabPostInit("spear_wathgrithr_lightning", function(inst)
+--     if not GLOBAL.TheWorld.ismastersim then
+--         return
+--     end
+--     if inst.components.finiteuses then
+--         inst:RemoveComponent("finiteuses")
+--     end
+-- end)
 
 -- 女武神属性修改
 TUNING.WATHGRITHR_SANITY = 120
