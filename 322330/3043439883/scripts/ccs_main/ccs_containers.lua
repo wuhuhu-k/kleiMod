@@ -518,3 +518,69 @@ end
 function params.ccs_blackpet.itemtestfn(container, item, slot)
     return not item.replica.container
 end
+
+
+params.ccs_apple_container =
+{
+    widget =
+    {
+        slotpos = {},
+        animbank = "ui_chest_3x3",
+        animbuild = "ccs_sb_item_skins_appale_rq",
+        pos = Vector3(0, 200, 0),
+        slotbg = {},
+        side_align_tip = 160,
+    },
+    type = "chest",
+}
+
+for y = 2, 0, -1 do
+    for x = 0, 2 do
+        table.insert(params.ccs_apple_container.widget.slotpos, Vector3(80 * x - 80 * 2 + 80, 80 * y - 85 * 2 + 80, 0))
+    end
+end
+
+for i = 0, 8 do
+    table.insert(
+            params.ccs_apple_container.widget.slotbg,
+            {image = 'ccs_sb_item_skins_appale2_image.tex', atlas = 'images/inventoryimages/ccs_sb_item_skins_appale2_image.xml'}
+        )
+end
+
+
+function params.ccs_apple_container.itemtestfn(container, item, slot)
+    return not item.replica.container
+end
+
+
+params.ccs_apple2_container =
+{
+    widget =
+    {
+        slotpos = {},
+        animbank = "ui_chest_3x3",
+        animbuild = "ccs_sb_item_skins_appale2_rq",
+        pos = Vector3(0, 200, 0),
+        slotbg = {},
+        side_align_tip = 160,
+    },
+    type = "chest",
+}
+
+for y = 2, 0, -1 do
+    for x = 0, 2 do
+        table.insert(params.ccs_apple2_container.widget.slotpos, Vector3(80 * x - 80 * 2 + 80, 80 * y - 85 * 2 + 80, 0))
+    end
+end
+
+for i = 0, 8 do
+    table.insert(
+            params.ccs_apple2_container.widget.slotbg,
+            {image = 'ccs_sb_item_skins_appale2_image.tex', atlas = 'images/inventoryimages/ccs_sb_item_skins_appale2_image.xml'}
+        )
+end
+
+
+function params.ccs_apple2_container.itemtestfn(container, item, slot)
+    return not item.replica.container
+end

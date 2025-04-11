@@ -693,6 +693,45 @@ CcsItemSkin("ccs_sb_item","ccs_sb_item_skins18",{
             basebuild = "ccs_sb_item",
             basebank =  "ccs_sb_item",
         })
+CcsItemSkin("ccs_sb_item","ccs_sb_item_skins19",{
+            name = "小小樱-你瞅啥",
+            atlas = "images/inventoryimages/ccs_sb_item_skins19.xml",
+            image = "ccs_sb_item_skins19",
+            build = "ccs_sb_item_skins19",
+            bank =  "ccs_sb_item_skins19",
+            basebuild = "ccs_sb_item",
+            basebank =  "ccs_sb_item",
+})
+CcsItemSkin("ccs_sb_item","ccs_sb_item_skins20",{
+    name = "小小樱-哼 鬼东西",
+    atlas = "images/inventoryimages/ccs_sb_item_skins20.xml",
+    image = "ccs_sb_item_skins20",
+    build = "ccs_sb_item_skins20",
+    bank =  "ccs_sb_item_skins20",
+    basebuild = "ccs_sb_item",
+    basebank =  "ccs_sb_item",
+})
+
+CcsItemSkin("ccs_sb_item","ccs_sb_item_skins_appale",{
+    name = "定制：太阳果",
+    atlas = "images/inventoryimages/ccs_sb_item_skins_appale.xml",
+    image = "ccs_sb_item_skins_appale",
+    build = "ccs_sb_item_skins_appale",
+    bank =  "ccs_sb_item_skins_appale",
+    basebuild = "ccs_sb_item",
+    basebank =  "ccs_sb_item",
+})
+
+CcsItemSkin("ccs_sb_item","ccs_sb_item_skins_appale2",{
+    name = "定制：开心果",
+    atlas = "images/inventoryimages/ccs_sb_item_skins_appale2.xml",
+    image = "ccs_sb_item_skins_appale2",
+    build = "ccs_sb_item_skins_appale2",
+    bank =  "ccs_sb_item_skins_appale2",
+    basebuild = "ccs_sb_item",
+    basebank =  "ccs_sb_item",
+})
+
 CCSAPI.MakeItemSkinDefaultImage('ccs_flowerpot', 'images/inventoryimages/ccs_flowerpot.xml', 'ccs_flowerpot')
 CcsItemSkin2("ccs_flowerpot","ccs_flowerpot_skin1",{
                     name = "魔法花盆",
@@ -798,6 +837,26 @@ CcsItemSkin2("ccs_hat1","ccs_hat_skin_cn",{
             image = "ccs_hat_skin_cn",
             build = "ccs_hat_skin_cn",
             bank =  "ccs_hat_skin_cn",
+            basebuild = "ccs_hat1",
+            basebank =  "ccs_hat1",
+        })
+
+CcsItemSkin("ccs_hat1","ccs_hat_kinomoto",{
+            name = "定制：Kinomoto",
+            atlas = "images/inventoryimages/ccs_hat_kinomoto.xml",
+            image = "ccs_hat_kinomoto",
+            build = "ccs_hat_kinomoto",
+            bank =  "ccs_hat_kinomoto",
+            basebuild = "ccs_hat1",
+            basebank =  "ccs_hat1",
+        })
+
+CcsItemSkin("ccs_hat1","ccs_hat_skins_pinkcollege",{
+            name = "粉色学院帽",
+            atlas = "images/inventoryimages/ccs_hat_skins_pinkcollege.xml",
+            image = "ccs_hat_skins_pinkcollege",
+            build = "ccs_hat_skins_pinkcollege",
+            bank =  "ccs_hat_skins_pinkcollege",
             basebuild = "ccs_hat1",
             basebank =  "ccs_hat1",
         })
@@ -918,6 +977,16 @@ CcsItemSkin("ccs_hat1","ccs_hat_skin_lotus",{
     image = "ccs_hat_skin_lotus",
     build = "ccs_hat_skin_lotus",
     bank =  "ccs_hat_skin_lotus",
+    basebuild = "ccs_hat1",
+    basebank =  "ccs_hat1",
+})
+
+CcsItemSkin("ccs_hat1","ccs_hat_zr",{
+    name = "灼蕊",
+    atlas = "images/inventoryimages/ccs_hat_zr.xml",
+    image = "ccs_hat_zr",
+    build = "ccs_hat_zr",
+    bank =  "ccs_hat_zr",
     basebuild = "ccs_hat1",
     basebank =  "ccs_hat1",
 })
@@ -1063,6 +1132,16 @@ CcsItemSkin("ccs_cards_15","ccs_bow_skin_amosi",{
     image = "ccs_bow_skin_amosi",
     build = "ccs_bow_skin_amosi",
     bank =  "ccs_bow_skin_amosi",
+    basebuild = "ccs_cards",
+    basebank =  "ccs_cards",
+})
+
+CcsItemSkin("ccs_cards_15","ccs_bow_skin_rose",{
+    name = "定制：荆棘玫瑰之弓",
+    atlas = "images/inventoryimages/ccs_bow_skin_rose.xml",
+    image = "ccs_bow_skin_rose",
+    build = "ccs_bow_skin_rose",
+    bank =  "ccs_bow_skin_rose",
     basebuild = "ccs_cards",
     basebank =  "ccs_cards",
 })
@@ -1264,6 +1343,26 @@ CcsItemSkin("ccs_xk_item","ccs_xk_item_skins9",{
             basebank =  "ccs_xk_item",
         })
 
+CcsItemSkin("ccs_sb_item","ccs_sbxk_item_tusi",{
+            name = "定制：吐司啵啵",
+            atlas = "images/inventoryimages/ccs_sbxk_item_tusi.xml",
+            image = "ccs_sbxk_item_tusi",
+            build = "ccs_sbxk_item_tusi",
+            bank =  "ccs_sbxk_item_tusi",
+            basebuild = "ccs_sb_item",
+            basebank =  "ccs_sb_item",
+        })
+
+CcsItemSkin("ccs_xk_item","ccs_sbxk_item_tusi",{
+            name = "定制：吐司啵啵",
+            atlas = "images/inventoryimages/ccs_sbxk_item_tusi.xml",
+            image = "ccs_sbxk_item_tusi",
+            build = "ccs_sbxk_item_tusi",
+            bank =  "ccs_sbxk_item_tusi",
+            basebuild = "ccs_sb_item",
+            basebank =  "ccs_sb_item",
+        })
+
 CcsItemSkin("ccs_skirt1","ccs_skirt_skins1",{
             name = "格格裙",
             atlas = "images/inventoryimages/ccs_skirt_skins1.xml",
@@ -1404,6 +1503,16 @@ CcsItemSkin("ccs_guard","ccs_guard_skin2",{
     image = "ccs_guard_skin2",
     build = "ccs_guard_skin2",
     bank =  "ccs_guard_skin2",
+    basebuild = "ccs_guard",
+    basebank =  "ccs_guard",
+})
+
+CcsItemSkin("ccs_guard","ccs_guard_pipo",{
+    name = "定制：Pipo",
+    atlas = "images/inventoryimages/ccs_guard_pipo.xml",
+    image = "ccs_guard_pipo",
+    build = "ccs_guard_pipo",
+    bank =  "ccs_guard_pipo",
     basebuild = "ccs_guard",
     basebank =  "ccs_guard",
 })

@@ -29,6 +29,7 @@ local assets = {
 	Asset( "ANIM", "anim/ccs_skins_alice.zip" ),
 	Asset( "ANIM", "anim/ccs_skins_kioku.zip" ),
 	Asset( "ANIM", "anim/zhishi.zip" ),
+	Asset( "ANIM", "anim/ccs_skins_pinkcollege.zip" ), --粉色学院
 	Asset( "ANIM", "anim/ccs_skins_haiyu.zip" ),
 	Asset( "ANIM", "anim/shiranui.zip" ),
 	Asset( "ANIM", "anim/daji.zip" ),
@@ -55,7 +56,7 @@ if TUNING.GAMEMODE_STARTING_ITEMS then
 	end
 	TUNING.STARTING_ITEM_IMAGE_OVERRIDE.ccs_bag =  {atlas = "images/inventoryimages/ccs_bag.xml", image = "ccs_bag.tex" }
 
-	TUNING.CCS_HEALTH = 150
+	TUNING.CCS_HEALTH = 100
 	TUNING.CCS_HUNGER = 150
 	TUNING.CCS_SANITY = 150
 end
@@ -793,7 +794,52 @@ MakeCcsSkin("ccs_skins_lotus",{
 	share_bigportrait_name = "ccs_none",
 })
 
+MakeCcsSkin("ccs_kinomoto",{
+    name = "定制：Kinomoto",
+    des = "定制：Kinomoto",
+    quotes = "定制：Kinomoto",
+    rarity = "定制：Kinomoto",
+	rarityorder = 1,
+    raritycorlor = {255 / 255, 215 / 255, 0 / 255, 1},
+    skins = {normal_skin = "ccs_kinomoto", ghost_skin = "ghost_ccs_build"},
+	build_name_override = "ccs",
+	share_bigportrait_name = "ccs_none",
+})
 
+MakeCcsSkin("ccs_naxida1",{
+    name = "定制：纳西妲1",
+    des = "定制：纳西妲1",
+    quotes = "定制：纳西妲1",
+    rarity = "定制：纳西妲1",
+	rarityorder = 1,
+    raritycorlor = {255 / 255, 215 / 255, 0 / 255, 1},
+    skins = {normal_skin = "ccs_naxida1", ghost_skin = "ghost_ccs_build"},
+	build_name_override = "ccs",
+	share_bigportrait_name = "ccs_none",
+})
+
+MakeCcsSkin("ccs_naxida2",{
+    name = "定制：纳西妲2",
+    des = "定制：纳西妲2",
+    quotes = "定制：纳西妲2",
+    rarity = "定制：纳西妲2",
+	rarityorder = 1,
+    raritycorlor = {255 / 255, 215 / 255, 0 / 255, 1},
+    skins = {normal_skin = "ccs_naxida2", ghost_skin = "ghost_ccs_build"},
+	build_name_override = "ccs",
+	share_bigportrait_name = "ccs_none",
+})
+MakeCcsSkin("ccs_skins_pinkcollege",{
+    name = "粉色学院",
+    des = "粉色学院",
+    quotes = "粉色学院",
+    rarity = "粉色学院",
+	rarityorder = 1,
+    raritycorlor = {255 / 255, 215 / 255, 0 / 255, 1},
+    skins = {normal_skin = "ccs_skins_pinkcollege", ghost_skin = "ghost_ccs_build"},
+	build_name_override = "ccs",
+	share_bigportrait_name = "ccs_none",
+})
 
 
 return MakePlayerCharacter("ccs", prefabs, assets, common_postinit, master_postinit, start_inv)

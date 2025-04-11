@@ -539,9 +539,9 @@ CCS_PACK.fn = function(act)
 				return false			
 			end
 			if doer:HasTag("ccs") then
-				doer.components.ccs_magic:DoDelta(-20)
+				-- doer.components.ccs_magic:DoDelta(-20)
 			else
-				doer.components.sanity:DoDelta(-35)
+				-- doer.components.sanity:DoDelta(-35)
 			end
 			if act.invobject then
 				if act.invobject.prefab == "ccs_sakura2" then

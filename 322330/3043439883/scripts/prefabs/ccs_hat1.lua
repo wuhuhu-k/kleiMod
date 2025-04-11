@@ -83,6 +83,11 @@ local function onequip(inst,owner)
 				inst._front:SetSkin("ccs_hat_skins4", inst.GUID)
 				inst._back:SetSkin("ccs_hat_skins4", inst.GUID)
 			end
+		elseif skin_name == "ccs_hat_zr" then 
+			owner.AnimState:Show("HAT")
+			owner.AnimState:Show("HAT_HAIR")
+			owner.AnimState:Hide("HAIR_NOHAT")
+			owner.AnimState:OverrideSymbol("swap_hat", skin_build, "swap_hat")
 		elseif skin_name == "ccs_hat1_skins2_yx" then 
 		else
 			if skin_build ~= nil then
@@ -105,13 +110,10 @@ local function onunequip(inst,owner)
 	    local skin_build = inst:GetSkinBuild()
 		if skin_name == "ccs_hat1_skins1" then
 			owner.AnimState:ClearOverrideBuild("ccs_hat1_skins1")  
-		elseif skin_name == "ccs_hat_skins3" or skin_name == "ccs_hat_skin_star" then
+		elseif skin_name == "ccs_hat_skins3" or skin_name == "ccs_hat_skin_star" or skin_name == "ccs_hat_zr" then
 			owner.AnimState:Hide("HAT")
 			owner.AnimState:Hide("HAT_HAIR")
 			owner.AnimState:Show("HAIR_NOHAT")
-			if skin_build ~= nil then
-				owner:PushEvent("unequipskinneditem", inst:GetSkinName())
-			end
 		elseif skin_name == "ccs_hat_skins4" then
 			if inst._back ~= nil then
 				inst._back:OnDeactivated()
@@ -136,6 +138,9 @@ local function onunequip(inst,owner)
 			else
 				owner.AnimState:ClearOverrideBuild("ccs_hat1")  
 			end
+		end
+		if skin_build ~= nil then
+			owner:PushEvent("unequipskinneditem", inst:GetSkinName())
 		end
 	end
 	

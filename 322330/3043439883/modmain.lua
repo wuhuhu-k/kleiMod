@@ -73,8 +73,7 @@ PrefabFiles = {
 	"ccs_cookpot",
 	"ccs_cookpot2",
 	"ccs_lizifx_ranibowspark",
-	"ccs_lizifx_bubble",
-	-- "css_wuhuhu_light"
+	"ccs_lizifx_bubble"
 }
 
 Assets = {
@@ -316,7 +315,17 @@ Assets = {
 	Asset("IMAGE", "images/inventoryimages/ccs_xk_item_skins18.tex"),
 	Asset("ATLAS", "images/inventoryimages/ccs_xk_item_skins18.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/ccs_xk_item_skins18.xml",256),
-	
+
+	Asset("ANIM", "anim/ccs_sb_item_skins19.zip"),  --小小樱动画文件
+	Asset("IMAGE", "images/inventoryimages/ccs_sb_item_skins19.tex"), --物品栏贴图
+	Asset("ATLAS", "images/inventoryimages/ccs_sb_item_skins19.xml"),
+	Asset("ATLAS_BUILD", "images/inventoryimages/ccs_sb_item_skins19.xml",256),
+
+	Asset("ANIM", "anim/ccs_sb_item_skins20.zip"),  --小小樱动画文件
+	Asset("IMAGE", "images/inventoryimages/ccs_sb_item_skins20.tex"), --物品栏贴图
+	Asset("ATLAS", "images/inventoryimages/ccs_sb_item_skins20.xml"),
+	Asset("ATLAS_BUILD", "images/inventoryimages/ccs_sb_item_skins20.xml",256),
+
 	Asset("ANIM", "anim/ccs_xk_item_sxz_skins.zip"),
 	Asset("IMAGE", "images/inventoryimages/ccs_sb_item_sxz_skins1.tex"),
 	Asset("ATLAS", "images/inventoryimages/ccs_sb_item_sxz_skins1.xml"),
@@ -780,6 +789,48 @@ Assets = {
 	Asset("ANIM", "anim/ccs_cards_21_skins1.zip"),
 	Asset("ATLAS", "images/inventoryimages/ccs_cards_21_skins1.xml"), 
     Asset("IMAGE", "images/inventoryimages/ccs_cards_21_skins1.tex"),
+
+	Asset("ANIM", "anim/ccs_bow_skin_rose.zip"),
+	Asset("ATLAS", "images/inventoryimages/ccs_bow_skin_rose.xml"), 
+    Asset("IMAGE", "images/inventoryimages/ccs_bow_skin_rose.tex"),
+
+	Asset("ANIM", "anim/ccs_guard_pipo.zip"),
+	Asset("ATLAS", "images/inventoryimages/ccs_guard_pipo.xml"), 
+    Asset("IMAGE", "images/inventoryimages/ccs_guard_pipo.tex"),
+
+	Asset("ANIM", "anim/ccs_hat_kinomoto.zip"),
+	Asset("ATLAS", "images/inventoryimages/ccs_hat_kinomoto.xml"), 
+    Asset("IMAGE", "images/inventoryimages/ccs_hat_kinomoto.tex"),
+
+	Asset("ANIM", "anim/ccs_hat_zr.zip"),
+	Asset("ATLAS", "images/inventoryimages/ccs_hat_zr.xml"), 
+    Asset("IMAGE", "images/inventoryimages/ccs_hat_zr.tex"),
+
+	Asset("ANIM", "anim/ccs_sbxk_item_tusi.zip"),
+	Asset("ATLAS", "images/inventoryimages/ccs_sbxk_item_tusi.xml"), 
+    Asset("IMAGE", "images/inventoryimages/ccs_sbxk_item_tusi.tex"),
+
+	Asset("ATLAS", "images/inventoryimages/ccs_sb_item_skins_appale2_image.xml"), 
+    Asset("IMAGE", "images/inventoryimages/ccs_sb_item_skins_appale2_image.tex"),
+	
+	Asset("ANIM", "anim/ccs_sb_item_skins_appale.zip"),
+	Asset("ATLAS", "images/inventoryimages/ccs_sb_item_skins_appale.xml"), 
+    Asset("IMAGE", "images/inventoryimages/ccs_sb_item_skins_appale.tex"),
+
+	Asset("ANIM", "anim/ccs_sb_item_skins_appale2.zip"),
+	Asset("ATLAS", "images/inventoryimages/ccs_sb_item_skins_appale2.xml"), 
+    Asset("IMAGE", "images/inventoryimages/ccs_sb_item_skins_appale2.tex"),
+
+	Asset("ANIM", "anim/ccs_hat_skins_pinkcollege.zip"),
+	Asset("ATLAS", "images/inventoryimages/ccs_hat_skins_pinkcollege.xml"), 
+    Asset("IMAGE", "images/inventoryimages/ccs_hat_skins_pinkcollege.tex"),
+
+	Asset("ANIM", "anim/ccs_sb_item_skins_appale_rq.zip"),
+	Asset("ANIM", "anim/ccs_sb_item_skins_appale2_rq.zip"),
+
+	Asset("ANIM", "anim/ccs_kinomoto.zip"), 
+	Asset("ANIM", "anim/ccs_naxida1.zip"), 
+	Asset("ANIM", "anim/ccs_naxida2.zip"), 
 	
 	Asset("ANIM", "anim/ccs_shield_fx.zip"), 
 	

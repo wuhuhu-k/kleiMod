@@ -49,6 +49,12 @@ local skin = {
     {name = "ccs_sb_item_skins16",skin = "ccs_sb_item_skins16",anim = "animation"},
     {name = "ccs_sb_item_skins17",skin = "ccs_sb_item_skins17",anim = "animation",state = 2,container = "ccs_bluepet"},
     {name = "ccs_sb_item_skins18",skin = "ccs_sb_item_skins18",anim = "animation",state = 3,container = "ccs_blackpet"},
+    {name = "ccs_sb_item_skins19",skin = "ccs_sb_item_skins19",anim = "animation"},
+    {name = "ccs_sb_item_skins20",skin = "ccs_sb_item_skins20",anim = "animation"},
+    {name = "ccs_sbxk_item_tusi",skin = "ccs_sbxk_item_tusi",anim = "animation",scale = 0.7},
+    {name = "ccs_sb_item_skins_appale",skin = "ccs_sb_item_skins_appale",anim = "animation",container = "ccs_apple_container",state = 4,scale = 0.8},
+    {name = "ccs_sb_item_skins_appale2",skin = "ccs_sb_item_skins_appale2",anim = "animation",container = "ccs_apple2_container",state = 5,scale = 0.8},
+
 }
 local function onuse(inst, doer)
     if inst.ccs_sb and inst.ccs_sb:IsValid() then
@@ -204,6 +210,10 @@ local function oncontainer_change(inst)
         inst.replica.container:WidgetSetup("ccs_bluepet")
 	elseif num == 3 then
         inst.replica.container:WidgetSetup("ccs_blackpet")
+    elseif num == 4 then
+        inst.replica.container:WidgetSetup("ccs_apple_container")
+    elseif num == 5 then
+        inst.replica.container:WidgetSetup("ccs_apple2_container")
     elseif num == 1 then
         inst.replica.container:WidgetSetup("chester")
     end

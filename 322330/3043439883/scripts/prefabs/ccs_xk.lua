@@ -49,6 +49,7 @@ local skin = {
     {name = "ccs_xk_item_skins16",skin = "ccs_sb_item_skins16",anim = "animation"}, 
     {name = "ccs_xk_item_skins17",skin = "ccs_sb_item_skins17",anim = "animation",state = 2,container = "ccs_bluepet"}, 
     {name = "ccs_xk_item_skins18",skin = "ccs_sb_item_skins18",anim = "animation",state = 3,container = "ccs_blackpet"}, 
+    {name = "ccs_sbxk_item_tusi",skin = "ccs_sbxk_item_tusi",anim = "animation",scale = 0.7},
 }
 local function onuse(inst, doer)
 	if not doer:HasTag("ccs") then doer.components.talker:Say("只有小樱才可以召唤小可") return false end

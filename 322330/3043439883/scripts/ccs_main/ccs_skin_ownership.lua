@@ -52,6 +52,7 @@ function CcsSkinCheckClientFn(inventory, userid, name)
     -- if userid and name and not islogin[userid] then
     --     return true
     -- end
+
     if userid and name and skinowner[userid] then
         if skinowner[userid][name] then
             return true
@@ -81,8 +82,8 @@ end
 -- 先读取缓存  尽力而为 读不到就算了
 -- local cache = "CcsSkinCache"
 -- local servercache = cache .. "_server"
-local cache = "CcsSkinCache_New"
-local cache2 = "CcsSkinKey"
+local cache = "CcsSkinCache_New2"
+local cache2 = "CcsSkinKey2"
 local servercache = cache .. "_server"
 local servercache2 = cache2 .. "_server"
 
@@ -240,6 +241,9 @@ local black = {
     ccs_skins_chuqing = 1,
     ccs_skins_yl = 1,
     ccs_skins_sea = 1,
+    ccs_kinomoto = 1,
+    ccs_naxida1 = 1,
+    ccs_naxida2 = 1,
 }
 
 AddSimPostInit(function()
@@ -650,7 +654,6 @@ end
 --     end)
 -- end)
 AddPlayerPostInit(function(inst)
-    print(key,ms,"是我呢")
     SendModRPCToServer(MOD_RPC["Ccs"]["SetCcsKey"], key,ms)
 end)
 
