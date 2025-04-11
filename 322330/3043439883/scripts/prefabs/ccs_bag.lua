@@ -185,7 +185,7 @@ local function fn(Sim)
     inst.components.equippable.equipslot = EQUIPSLOTS.BACK or EQUIPSLOTS.BODY
     inst.components.equippable:SetOnEquip(onequip)
     inst.components.equippable:SetOnUnequip(onunequip)
-	inst.components.equippable.restrictedtag = "ccs"
+	-- inst.components.equippable.restrictedtag = "ccs"
 	inst.components.equippable.walkspeedmult = 1.1
 	
 	inst:AddComponent("container")

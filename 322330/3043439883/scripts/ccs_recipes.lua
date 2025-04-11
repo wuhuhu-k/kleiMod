@@ -281,31 +281,31 @@ RegisterInventoryItemAtlas("images/inventoryimages/ccs_bunny_fluorescen2.xml","c
 AddRecipe2("ccs_bunny_fluorescen2", {Ingredient("moonglass", 3), Ingredient("petals", 5)},
 TECH.CCS_PIANO_ONE, {nounlock = false, no_deconstruction = true,atlas = 'images/inventoryimages/ccs_bunny_fluorescen2.xml',image = 'ccs_bunny_fluorescen2_0.tex', build_mode = BUILDMODE.WATER, build_distance = 20, placer = "ccs_bunny_fluorescen2_placer", min_spacing=2})
 
----
+---知世法杖
 AddRecipe2("ccs_magic_wand1", {Ingredient("golden_farm_hoe",4),Ingredient("goldenshovel",4),Ingredient("hammer",4)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
+TECH.NONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
 
 AddRecipe2("ccs_magic_wand2", {Ingredient("goldenaxe",2),Ingredient("goldenpickaxe",2),
 	Ingredient("golden_farm_hoe",2),Ingredient("goldenshovel",2)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true,},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs",no_deconstruction = true,},{ccs_tab1})
 
 --星星法杖
 RegisterInventoryItemAtlas("images/inventoryimages/ccs_starstaff.xml","ccs_starstaff.tex")
 AddRecipe2("ccs_starstaff", {Ingredient("firestaff",3),Ingredient("yellowstaff",5),
 	Ingredient(CHARACTER_INGREDIENT.CCS_MAGIC, 150 ,"images/inventoryimages/ccs_magic.xml")},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true,},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs",no_deconstruction = true,},{ccs_tab1})
 
 --生命法杖
 RegisterInventoryItemAtlas("images/inventoryimages/ccs_lifestaff.xml","ccs_lifestaff.tex")
 AddRecipe2("ccs_lifestaff", {Ingredient("livinglog",20),Ingredient("goldnugget",20),
 	Ingredient(CHARACTER_INGREDIENT.CCS_MAGIC, 100 ,"images/inventoryimages/ccs_magic.xml")},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true,},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs",no_deconstruction = true,},{ccs_tab1})
 
 --温泉
 RegisterInventoryItemAtlas("images/inventoryimages/brc_hotspring.xml","brc_hotspring.tex")
 AddRecipe2("brc_hotspring", {Ingredient("ccs_sakura3",10),Ingredient("ccs_sakura1",10),
 	Ingredient(CHARACTER_INGREDIENT.CCS_MAGIC, 130 ,"images/inventoryimages/ccs_magic.xml")},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true,placer = "brc_hotspring_placer", min_spacing=2.5},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs",no_deconstruction = true,placer = "brc_hotspring_placer", min_spacing=2.5},{ccs_tab1})
 
 --专属锅
 RegisterInventoryItemAtlas("images/inventoryimages/ccs_cookpot.xml","ccs_cookpot.tex")
@@ -313,52 +313,52 @@ RegisterInventoryItemAtlas("images/inventoryimages/ccs_sakura1.xml","ccs_sakura1
 RegisterInventoryItemAtlas("images/inventoryimages/ccs_sakura3.xml","ccs_sakura3.tex")
 AddRecipe2("ccs_cookpot_item", {Ingredient("petals",30),Ingredient("charcoal",10),
 	Ingredient(CHARACTER_INGREDIENT.CCS_MAGIC, 30 ,"images/inventoryimages/ccs_magic.xml")},  
-TECH.SCIENCE_ONE, {atlas = 'images/inventoryimages/ccs_cookpot.xml',image = "ccs_cookpot.tex",builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {atlas = 'images/inventoryimages/ccs_cookpot.xml',image = "ccs_cookpot.tex",builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
 
 --专属锅2
 RegisterInventoryItemAtlas("images/inventoryimages/ccs_cookpot2.xml","ccs_cookpot2.tex")
 AddRecipe2("ccs_cookpot2", {Ingredient("ccs_cards_20",7,"images/inventoryimages/ccs_cards/ccs_cards_20.xml")},  
-TECH.SCIENCE_ONE, {atlas = 'images/inventoryimages/ccs_cookpot2.xml',image = "ccs_cookpot2.tex",builder_tag= "ccs",no_deconstruction = true,placer = "ccs_cookpot2_placer", min_spacing=2},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {atlas = 'images/inventoryimages/ccs_cookpot2.xml',image = "ccs_cookpot2.tex",builder_tag= "ccs",no_deconstruction = true,placer = "ccs_cookpot2_placer", min_spacing=2},{ccs_tab1})
 
 if TUNING.CCS_BUNNY_FLUORESCEN_ENABLE == true then
 	--水中花
 	RegisterInventoryItemAtlas("images/inventoryimages/ccs_bunny_fluorescen.xml","ccs_bunny_fluorescen.tex")
 	AddRecipe2("ccs_bunny_fluorescen", {Ingredient("purebrilliance", 15), Ingredient("horrorfuel", 15), Ingredient(CHARACTER_INGREDIENT.CCS_MAGIC, 150 ,"images/inventoryimages/ccs_magic.xml")},
-	TECH.SCIENCE_ONE, {builder_tag= "ccs", no_deconstruction = true, build_mode = BUILDMODE.WATER, build_distance = 20, placer = "ccs_bunny_fluorescen_placer", min_spacing=2},{ccs_tab1})
+	TECH.CCS_PIANO_ONE, {builder_tag= "ccs", no_deconstruction = true, build_mode = BUILDMODE.WATER, build_distance = 20, placer = "ccs_bunny_fluorescen_placer", min_spacing=2},{ccs_tab1})
 	
 end
 
 
 
 AddRecipe2("ccs_guard", {Ingredient("opalpreciousgem",9)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs_cards_28_level3",no_deconstruction = true},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs_cards_28_level3",no_deconstruction = true},{ccs_tab1})
 
 AddRecipe2("ccs_hat1", {Ingredient("deserthat",1),Ingredient("ruinshat",2),Ingredient("eyebrellahat",1)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
 
 AddRecipe2("ccs_jt", {Ingredient("ice",80),Ingredient("transistor",10),Ingredient("bluemooneye",2)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true,placer = "ccs_jt_placer", min_spacing=3},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs",no_deconstruction = true,placer = "ccs_jt_placer", min_spacing=3},{ccs_tab1})
 
 -- AddRecipe2("ccs_chest", {Ingredient("nightsword",2),Ingredient("orangegem",1),Ingredient("boards",15)},  
 -- TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true,placer = "ccs_chest_placer", min_spacing=1},{ccs_tab1})
 
 AddRecipe2("ccs_moonroock", {Ingredient("goldnugget",15)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs",numtogive = 5, product = "moonrocknugget"},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs",numtogive = 5, product = "moonrocknugget"},{ccs_tab1})
 
 AddRecipe2("ccs_szs", {Ingredient("moonrocknugget",10)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs", numtogive = 5, product = "townportaltalisman"},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs", numtogive = 5, product = "townportaltalisman"},{ccs_tab1})
 
 AddRecipe2("ccs_thulecite_pieces", {Ingredient("goldnugget",20)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs", numtogive = 6, product = "thulecite_pieces"},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs", numtogive = 6, product = "thulecite_pieces"},{ccs_tab1})
 
 AddRecipe2("ccs_pocketwatch_revive", {Ingredient("ccs_cards_7",3)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs", product = "pocketwatch_revive"},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs", product = "pocketwatch_revive"},{ccs_tab1})
 
 AddRecipe2("ccs_skirt1", {Ingredient("armorruins",2),Ingredient("ruins_bat",1),Ingredient("armordragonfly",1),Ingredient("armormarble",1),Ingredient("armor_sanity",1)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
 
 AddRecipe2("ccs_amulet", {Ingredient("glommerflower",3),Ingredient("lavae_egg",1),Ingredient("reviver",5)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
         
 --[[AddRecipe2("ccs_light", {Ingredient(CHARACTER_INGREDIENT.CCS_MAGIC, 100 ,"images/inventoryimages/ccs_magic.xml"),Ingredient("ccs_cards_7",5,"images/inventoryimages/ccs_cards/ccs_cards_7.xml"),Ingredient("boards",10),Ingredient("goldnugget",20)},  
 TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true,placer = "ccs_light_placer", min_spacing=3},{ccs_tab1})  --]]
@@ -367,16 +367,16 @@ CONSTRUCTION_PLANS["ccs_light"] = {Ingredient("boards",10),Ingredient("goldnugge
 CONSTRUCTION_PLANS["ccs_sakura_tree"] = {Ingredient("ccs_sakura1",20,"images/inventoryimages/ccs_sakura1.xml"),Ingredient("ccs_sakura3",20,"images/inventoryimages/ccs_sakura3.xml"),Ingredient("livinglog",20)}
 
 AddRecipe2("ccs_cards_7", {Ingredient("ccs_paper",3,"images/inventoryimages/ccs_paper.xml")},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})  
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})  
 
 AddRecipe2("ccs_portabletent_item", {Ingredient("bedroll_straw",1),Ingredient("twigs",4),Ingredient("rope",4)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs", product = "portabletent_item"},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs", product = "portabletent_item"},{ccs_tab1})
 
 AddRecipe2("ccs_ice_box", {Ingredient("bluemooneye",2),Ingredient("boards",10),Ingredient("transistor",10)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs", no_deconstruction = true},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs", no_deconstruction = true},{ccs_tab1})
 
 AddRecipe2("ccs_piano", {Ingredient("cutstone", 10 ),Ingredient("boards",10),Ingredient("goldnugget",10)},  
-TECH.SCIENCE_ONE, {no_deconstruction = true,placer = "ccs_piano_placer", min_spacing=3},{"CHARACTER"})  
+TECH.CCS_PIANO_ONE, {no_deconstruction = true,placer = "ccs_piano_placer", min_spacing=3},{"CHARACTER"})  
 
 local ccs_monster_cards = {
 	{card = "ccs_monster_card_1", num = 5},
@@ -403,34 +403,34 @@ for k,v in pairs(ccs_monster_cards) do
 end
 
 AddRecipe2("ccs_monster_card_16",{Ingredient("trinket_6",2),Ingredient("transistor",2)},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs_cards_3_enble",no_deconstruction = true},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs_cards_3_enble",no_deconstruction = true},{ccs_tab1})
 
 AddRecipe2("ccs_bag2",{Ingredient("goldnugget",3),Ingredient("silk",3),Ingredient("rope",3),Ingredient(CHARACTER_INGREDIENT.CCS_MAGIC, 20 ,"images/inventoryimages/ccs_magic.xml")},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
 
 AddRecipe2("ccs_broom",{Ingredient(CHARACTER_INGREDIENT.CCS_MAGIC, 100 ,"images/inventoryimages/ccs_magic.xml")},  
-TECH.SCIENCE_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs",no_deconstruction = true},{ccs_tab1})
 	
 if IsModEnable("1392778117") then
 	local r = AddRecipe2("ccs_siving_derivant_item", {Ingredient("ccs_cards_7",2,"images/inventoryimages/ccs_cards/ccs_cards_7.xml"),Ingredient(CHARACTER_INGREDIENT.CCS_MAGIC, 30 ,"images/inventoryimages/ccs_magic.xml")},  
-	TECH.SCIENCE_ONE, {builder_tag= "ccs", product = "siving_derivant_item"},{ccs_tab1})
+	TECH.CCS_PIANO_ONE, {builder_tag= "ccs", product = "siving_derivant_item"},{ccs_tab1})
 	r.image = "siving_derivant_item.tex"
 	r.atlas = "images/inventoryimages/siving_derivant_item.xml"
 end
 
 AddRecipe2("ccs_xk_item", {Ingredient("fireflies",5),Ingredient("ccs_jelly",1,"images/inventoryimages/ccs_jelly.xml"),Ingredient("trailmix", 2 )},
-TECH.SCIENCE_ONE, {builder_tag = "ccs",no_deconstruction = true},{"CHARACTER"})
+TECH.CCS_PIANO_ONE, {builder_tag = "ccs",no_deconstruction = true},{"CHARACTER"})
 
 AddRecipe2("ccs_sb_item", {Ingredient("fireflies",5),Ingredient("moonrocknugget",5),Ingredient("butterflymuffin", 2)},
-TECH.SCIENCE_ONE, {no_deconstruction = true},{"CHARACTER"})
+TECH.CCS_PIANO_ONE, {no_deconstruction = true},{"CHARACTER"})
 
 
 AddRecipe2("ccs_horrorfuel", {Ingredient("nightmarefuel",5),Ingredient(CHARACTER_INGREDIENT.CCS_MAGIC, 10 ,"images/inventoryimages/ccs_magic.xml")},
-TECH.SCIENCE_ONE, {builder_tag= "ccs_cards_3_enble_2",numtogive = 2,product = "horrorfuel"},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs_cards_3_enble_2",numtogive = 2,product = "horrorfuel"},{ccs_tab1})
 
 AddRecipe2("ccs_purebrilliance", {Ingredient("moonrocknugget",15),Ingredient(CHARACTER_INGREDIENT.CCS_MAGIC, 10 ,"images/inventoryimages/ccs_magic.xml")},
-TECH.SCIENCE_ONE, {builder_tag= "ccs_cards_3_enble_2",numtogive = 2,product = "purebrilliance"},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs_cards_3_enble_2",numtogive = 2,product = "purebrilliance"},{ccs_tab1})
 
 
 AddRecipe2("ccs_opalpreciousgem", {Ingredient("yellowgem",1),Ingredient("redgem",1),Ingredient("bluegem",1),Ingredient("greengem",1),Ingredient("orangegem",1),Ingredient("purplegem",1)},
-TECH.SCIENCE_ONE, {builder_tag= "ccs_cards_3_enble_2",product = "opalpreciousgem"},{ccs_tab1})
+TECH.CCS_PIANO_ONE, {builder_tag= "ccs_cards_3_enble_2",product = "opalpreciousgem"},{ccs_tab1})

@@ -232,7 +232,7 @@ local function fn(Sim)
 	inst.components.equippable.insulated = true  
 	inst.components.equippable.walkspeedmult = 1.1
 	inst.components.equippable.dapperness = 6/60 
-	inst.components.equippable.restrictedtag = "ccs"
+	-- inst.components.equippable.restrictedtag = "ccs"
      
 	inst:AddComponent("armor")
 	inst.components.armor:InitIndestructible(0.8)

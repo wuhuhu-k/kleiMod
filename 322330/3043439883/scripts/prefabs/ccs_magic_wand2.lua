@@ -340,7 +340,7 @@ local function fn(Sim)
 	inst:AddComponent("equippable") --可装备组件
     inst.components.equippable:SetOnEquip(onequip)
     inst.components.equippable:SetOnUnequip(onunequip)
-	inst.components.equippable.restrictedtag = "ccs"
+	-- inst.components.equippable.restrictedtag = "ccs"
 	
     inst:AddComponent("inspectable") --可检查
 		

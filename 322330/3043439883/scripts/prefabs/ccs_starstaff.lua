@@ -626,7 +626,7 @@ local function fn()
     inst:AddComponent("equippable") --可装备组件
     inst.components.equippable:SetOnEquip(onequip)
     inst.components.equippable:SetOnUnequip(onunequip)
-    inst.components.equippable.restrictedtag = "ccs"
+    -- inst.components.equippable.restrictedtag = "ccs"
     inst.components.equippable.walkspeedmult = 1.25 --移速
 
     inst:AddComponent('container')
