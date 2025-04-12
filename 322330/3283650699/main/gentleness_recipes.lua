@@ -183,7 +183,7 @@ local mxj_recipes = {
         ["tech_tab"] = tech_01,
     },
     ["gentleness_amulet"] = {
-        ["ingredient"] = { Ingredient("opalpreciousgem", 1), Ingredient("tallbirdegg", 10), Ingredient("fireflies", 50), Ingredient("dreadstone", 10), }, ["tech"] = TECH["LOST"],
+        ["ingredient"] = { Ingredient("yellowgem", 1), Ingredient("fireflies", 5), Ingredient("goldnugget", 10), }, ["tech"] = TECH["LOST"],
         ["extra_data"] = {
             ["builder_tag"] = "gentleness",
             ["atlas"] = extra_xml, ["image"] = "gentleness_amulet.tex",

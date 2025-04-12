@@ -102,11 +102,11 @@ GENTLENESS_ACT_PACK["fn"] = function(act)
                 HH_UTILS:HHSay(player, "不是我的道具")
                 return true
             end
-            local current_magic = player["components"]["gentleness_magic"]:GetCurrentMagic()
-            if not current_magic or current_magic < 20 then
-                HH_UTILS:HHSay(player, "当前魔法值不够")
-                return true
-            end
+            -- local current_magic = player["components"]["gentleness_magic"]:GetCurrentMagic()
+            -- if not current_magic or current_magic < 20 then
+            --     HH_UTILS:HHSay(player, "当前魔法值不够")
+            --     return true
+            -- end
         end
         local spawn_bundle = SpawnPrefab("gentleness_bundle_a")
 
@@ -127,7 +127,7 @@ GENTLENESS_ACT_PACK["fn"] = function(act)
 
                     if item_id == "gentleness_amulet" then
                         if HH_UTILS:HasComponents(player, "gentleness_magic") then
-                            player["components"]["gentleness_magic"]:DoDelta(-20)
+                            -- player["components"]["gentleness_magic"]:DoDelta(-20)
                         end
                     else
 
