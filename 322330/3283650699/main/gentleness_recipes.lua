@@ -175,7 +175,7 @@ local mxj_recipes = {
     },
 
     ["gentleness_hat"] = {
-        ["ingredient"] = { Ingredient("footballhat", 2), Ingredient("ruinshat", 1), Ingredient("deserthat", 1), Ingredient("eyebrellahat", 1), }, ["tech"] = TECH["LOST"],
+        ["ingredient"] = { Ingredient("footballhat", 2), Ingredient("ruinshat", 1), Ingredient("walrushat", 1), Ingredient("eyebrellahat", 1), }, ["tech"] = TECH["LOST"],
         ["extra_data"] = {
             ["builder_tag"] = "gentleness",
             ["atlas"] = extra_xml, ["image"] = "gentleness_hat.tex",
