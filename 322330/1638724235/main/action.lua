@@ -58,10 +58,10 @@ SORAPACK.fn = function(act)
         return true
     end
     if invobject.prefab == "sorabowknot" then
-        if not doer:HasTag("Sora") then
-            doer.components.talker:Say("这是sora的蝴蝶结")
-            return true
-        end
+        -- if not doer:HasTag("Sora") then
+        --     doer.components.talker:Say("这是sora的蝴蝶结")
+        --     return true
+        -- end
         if invobject.exp < 1000 then
             doer.components.talker:Say("经验不足！打包需要1000\r\n当前经验:" .. invobject.exp)
             return true

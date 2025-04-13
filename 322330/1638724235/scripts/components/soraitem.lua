@@ -41,7 +41,7 @@ local function checkowner(inst,data)
     if inst.components.soraitem.bind and (inst.components.soraitem.user == "" or inst.components.soraitem.user == nil) then
         inst.components.soraitem.user = owner.userid
     end
-    if owner and not owner:HasTag("sora") then 
+    if owner and not owner:HasTag("sora") and false then 
         owner:DoTaskInTime(0,dropitem,inst)
         return 
     end

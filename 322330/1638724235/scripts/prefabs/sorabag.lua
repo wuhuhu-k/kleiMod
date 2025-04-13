@@ -195,7 +195,7 @@ end
 
 local function onequip(inst, owner)
     -- inst.components.inventoryitem.cangoincontainer = false
-    if owner == nil or not owner:HasTag("sora") then
+    if owner == nil or not owner:HasTag("sora") and false then
         owner:DoTaskInTime(0, function()
             if owner.components.inventory then
                 owner.components.inventory:GiveItem(inst)

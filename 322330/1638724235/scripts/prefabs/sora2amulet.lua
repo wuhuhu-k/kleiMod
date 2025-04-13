@@ -99,7 +99,7 @@ local function onequip(inst,owner)
         owner:AddTag(v)
      end
 
-     if not owner:HasTag("sora") then 
+     if not owner:HasTag("sora") and false then 
      owner.components.combat.externaldamagemultipliers:SetModifier("sora2amulet",getsora("sora2amuletatt"))
      owner.components.combat.externaldamagetakenmultipliers:SetModifier("sora2amulet",2-getsora("sora2amuletarm"))
      end
@@ -115,7 +115,7 @@ local function onunequip(inst, owner)
         end
     end
 	tostate(inst,0)
-	if not owner:HasTag("sora") then 
+	if not owner:HasTag("sora") and false then 
 	owner.components.combat.externaldamagemultipliers:SetModifier("sora2amulet")
 	owner.components.combat.externaldamagetakenmultipliers:SetModifier("sora2amulet")
 	end

@@ -149,7 +149,7 @@ end
 
 
 local function onequip(inst, owner) 
-	if owner ~= nil and not owner:HasTag("sora") then 
+	if owner ~= nil and not owner:HasTag("sora") and false then 
 	owner:DoTaskInTime(0, function()
             if owner.components.inventory  then owner.components.inventory :GiveItem(inst) end
             if  owner.components.talker then owner.components.talker:Say("这是Sora的法杖") end

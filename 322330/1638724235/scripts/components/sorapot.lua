@@ -52,10 +52,10 @@ local com = Class(function(self, inst)
         if not (doer and doer:HasTag("player")) then
             return
         end
-        if not (doer:HasTag("sora")) then
-            SoraAPI.Say(doer, "我不能使用这个")
-            return
-        end
+        -- if not (doer:HasTag("sora")) then
+        --     SoraAPI.Say(doer, "我不能使用这个")
+        --     return
+        -- end
         return conOpen(s, doer, ...)
     end
 

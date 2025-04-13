@@ -42,7 +42,7 @@ local function onequip(inst, owner)
     owner.AnimState:OverrideSymbol("swap_object", "sora2plant", "swap_weapon")
     owner.AnimState:Show("ARM_carry")
     owner.AnimState:Hide("ARM_normal")
-    if not owner:HasTag("sora") then
+    if not owner:HasTag("sora") and false then
         inst.isbig:set(false)
     end
 end

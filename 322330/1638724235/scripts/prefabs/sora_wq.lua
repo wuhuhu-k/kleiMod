@@ -79,7 +79,7 @@ local function onequip(inst, owner)
     owner.AnimState:OverrideSymbol("swap_object", inst.skinname or  "sora_wq", "swap_wq")
     owner.AnimState:Show("ARM_carry")
     owner.AnimState:Hide("ARM_normal")
-    if not owner:HasTag("sora") then return end
+    if not owner:HasTag("sora") and false then return end
     owner.components.combat.externaldamagemultipliers:SetModifier("sora_wq",inst.damageup)
     if owner.components.combat.external_critical_damage_multipliers then
         owner.components.combat.external_critical_damage_multipliers:SetModifier(inst, 0.442, "sora_wq")
@@ -97,7 +97,7 @@ local function onunequip(inst, owner)
     inst.owner = nil
     owner.AnimState:Hide("ARM_carry")
     owner.AnimState:Show("ARM_normal")
-    if not owner:HasTag("sora") then return end
+    if not owner:HasTag("sora") and false then return end
     owner.components.combat.externaldamagemultipliers:SetModifier("sora_wq")
     if owner.components.combat.external_critical_damage_multipliers then
         owner.components.combat.external_critical_damage_multipliers:RemoveModifier(inst)
