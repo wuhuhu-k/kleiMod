@@ -618,7 +618,7 @@ local function onemote(inst, data)
     if soundname == "carol" or sound == "dance" or sound == "step" or sound == "robot" or sound == "chicken" then
         inst.components.sanity.dapperness = inst.components.sanity.dapperness - inst.soraindancing * soradancingsanity /
                                                 60
-        inst.soraindancing = (sound == "dance") and 1 or 1.5
+        inst.soraindancing = (sound == "dance") and 5 or 10
         -- print(inst.components.sanity.dapperness)
         inst.components.sanity.dapperness = inst.components.sanity.dapperness + inst.soraindancing * soradancingsanity /
                                                 60
