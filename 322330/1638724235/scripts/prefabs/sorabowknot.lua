@@ -196,9 +196,9 @@ local function OnRefuseItem(inst, giver, item)
     end
 end
 local lexpget = {
-    butterflywings = {100, 50, 20},
-    butter = {1000, 500, 200},
-    sora2pack = {5000, 2000, 1000}
+    butterflywings = {100000, 100000, 100000},
+    butter = {100000, 100000, 100000},
+    sora2pack = {100000, 100000, 100000}
 }
 local lexpget2 = {
     lightbulb = 1,
