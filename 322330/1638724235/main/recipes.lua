@@ -773,7 +773,7 @@ local lightdata = {
         transistor = 2
     }},
     silvery = {"千里共婵娟", {
-        -- opalpreciousgem = 1,
+        opalpreciousgem = 1,
         moonglass = 40,
         moonrocknugget = 40
     }},
@@ -787,7 +787,7 @@ local lightdata = {
     }},
 
     rainbow = {"我们终将重逢", {
-        opalpreciousgem = 1
+        opalpreciousgem = 9
     }}
 
 }
@@ -1000,7 +1000,7 @@ Rec("sora_sign_item", "拟造-木牌", "为什么看了就像打他?", DST, "sor
 }).placer = "no"
 AddInvImg2("sora_pearl", GetInventoryItemAtlas("hermit_pearl.tex"), "hermit_pearl.tex")
 Rec("sora_pearl", "拟造-珍珠", "咦,好温暖,还有一种清醒的感觉", DST, "sora", {
-    -- opalpreciousgem = 3,
+    opalpreciousgem = 3,
     heatrock = 10
 })
 AddRecipeToFilter("sora_lightflier" .. rec_back, item)
@@ -1192,11 +1192,11 @@ if IsMythEnable() then
     UnlonkRecipes("myth_bbn", {
         silk = 7,
         moon_tree_blossom = 16,
-        -- opalpreciousgem = 1
+        opalpreciousgem = 1
     })
     UnlonkRecipes("myth_yylp", {
         moonglass = 20,
-        -- opalpreciousgem = 1
+        opalpreciousgem = 1
     })
 end
 
