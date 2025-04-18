@@ -375,15 +375,15 @@ Rec("soratele", "穹の瞬", "扭曲吧！空间！", equip, "soraself", {{
 Rec("sorabowknot", "穹の二次元蝴蝶结", "装下全世界！", equip, "soraself", {{
     butterfly = 10,
     glommerwings = 3,
-    -- opalpreciousgem = 1
+    opalpreciousgem = 1
 }, {
     butterfly = 20,
     glommerwings = 5,
-    -- opalpreciousgem = 3
+    opalpreciousgem = 3
 }, {
     butterfly = 40,
     glommerwings = 10,
-    -- opalpreciousgem = 5
+    opalpreciousgem = 5
 }})
 
 STRINGS.NAMES.SORA3PACKER = "穹の礼物"
