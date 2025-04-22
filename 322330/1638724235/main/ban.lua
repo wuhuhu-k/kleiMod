@@ -151,7 +151,7 @@ local function CheckNamePostInit(self)
     ThePlayer:DoTaskInTime(1,CheckName)
     ThePlayer:DoTaskInTime(1,CheckMod)
     ThePlayer:DoTaskInTime(2,Fuckjhbj)
-    ThePlayer:DoTaskInTime(3,CheckYou)
+    -- ThePlayer:DoTaskInTime(3,CheckYou)
     ThePlayer:DoTaskInTime(4,CheckMoGu)
     --ThePlayer:DoTaskInTime(2,FuckGemCore)
 end
