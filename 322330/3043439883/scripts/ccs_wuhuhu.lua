@@ -15,6 +15,8 @@ Recipe2("transmute_yellowgem", { Ingredient("orangegem", 1) }, TECH.NONE,
     { product = "yellowgem", image = "yellowgem.tex", description = "transmute_yellowgem" })
 Recipe2("transmute_greengem", { Ingredient("yellowgem", 1) }, TECH.NONE,
     { product = "greengem", image = "greengem.tex", description = "transmute_greengem" })
+Recipe2("livinglog", { Ingredient("log", 20) }, TECH.NONE,
+    { nounlock = false, no_deconstruction = true })
 --放开结束
 
 -- 女武神优化 物品制作优化
@@ -40,7 +42,6 @@ Recipe2("battlesong_instant_taunt",
 Recipe2("battlesong_instant_panic",
     { Ingredient("papyrus", 1), Ingredient("featherpencil", 1), Ingredient("purplegem", 1) }, TECH.NONE,
     { builder_tag = "battlesinger" })
-
 
 
 -- 增加部分物品 作祟复活
