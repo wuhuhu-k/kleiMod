@@ -15,8 +15,6 @@ Recipe2("transmute_yellowgem", { Ingredient("orangegem", 1) }, TECH.NONE,
     { product = "yellowgem", image = "yellowgem.tex", description = "transmute_yellowgem" })
 Recipe2("transmute_greengem", { Ingredient("yellowgem", 1) }, TECH.NONE,
     { product = "greengem", image = "greengem.tex", description = "transmute_greengem" })
-Recipe2("livinglog", { Ingredient("log", 20) }, TECH.NONE,
-    { product = "livinglog", image = "livinglog.tex", description = "livinglog" })
 
 --放开结束
 

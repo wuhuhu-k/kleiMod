@@ -62,3 +62,6 @@ AddPreFile("sora_ring")
 AddPreFile("sora_lyj")
 AddPreFile("sora_build")
 AddPreFile("sora_plant")
+
+Recipe2("livinglog", { Ingredient("log", 20) }, TECH.NONE,
+    { product = "livinglog", image = "livinglog.tex", description = "livinglog" })
