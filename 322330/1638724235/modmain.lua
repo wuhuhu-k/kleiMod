@@ -27,7 +27,8 @@ WeGame平台: 穹の空 模组ID：workshop-2199027653598519351
 2,本mod内贴图、动画相关文件禁止挪用,毕竟这是我自己花钱买的.
 3,严禁直接修改本mod内文件后二次发布。
 4,从本mod内提前的源码请保留版权信息,并且禁止加密、混淆。
-]] GLOBAL.setmetatable(env, {
+]]
+GLOBAL.setmetatable(env, {
     __index = function(t, k)
         return GLOBAL.rawget(GLOBAL, k)
     end
@@ -35,16 +36,15 @@ WeGame平台: 穹の空 模组ID：workshop-2199027653598519351
 
 modimport("main/init")
 -- prefab文件列表
-PrefabFiles = {"sora", "sorapocky", "sorarepairer", "sorabag", "soraclothes", "sorahat", "sora2hat", "sora2bag",
-               "sora2sword", "sora3sword", "sora2ice", "sora2fire", "sora2plant", "soramagic", "sorapick",
-               "sorahealing", "soratele", "sorabowknot", "sorabooks", "sorahealingstar", "soraprojectile", "sorameteor",
-               "sora2buffer", "sora2prop", "sora2amulet", "sora2base", "sora2chest", "sora2tree", "sorafoods",
-               "sorahair", "sora_item_fx", "sora_huapen", "sora_light", "sora_fl", "sora_flh", "sora_helper", "sora_wq",
-               "sora_nizao","sora_lock","sora_pickhat","sora2pokeball","sora_fx_feather"} --,""
-function  AddPreFile(str)
-    table.insert(PrefabFiles,str)
+PrefabFiles = { "sora", "sorapocky", "sorarepairer", "sorabag", "soraclothes", "sorahat", "sora2hat", "sora2bag",
+    "sora2sword", "sora3sword", "sora2ice", "sora2fire", "sora2plant", "soramagic", "sorapick",
+    "sorahealing", "soratele", "sorabowknot", "sorabooks", "sorahealingstar", "soraprojectile", "sorameteor",
+    "sora2buffer", "sora2prop", "sora2amulet", "sora2base", "sora2chest", "sora2tree", "sorafoods",
+    "sorahair", "sora_item_fx", "sora_huapen", "sora_light", "sora_fl", "sora_flh", "sora_helper", "sora_wq",
+    "sora_nizao", "sora_lock", "sora_pickhat", "sora2pokeball", "sora_fx_feather" } --,""
+function AddPreFile(str)
+    table.insert(PrefabFiles, str)
 end
-
 
 AddPreFile("sora2birdchest")
 AddPreFile("sora3chest")
@@ -63,5 +63,87 @@ AddPreFile("sora_lyj")
 AddPreFile("sora_build")
 AddPreFile("sora_plant")
 
+
+
+-- 放开沃姆伍德 泄根糖浆制作
+-- Recipe2("ipecacsyrup",{Ingredient("red_cap", 1), Ingredient("honey", 1), Ingredient("spoiled_food", 1)},			
+-- TECH.NONE,	{builder_skill="wormwood_syrupcrafting", allowautopick=true})
+Recipe2("ipecacsyrup", { Ingredient("red_cap", 1), Ingredient("honey", 1), Ingredient("spoiled_food", 1) }, TECH.NONE,
+    { nounlock = false, no_deconstruction = true })
+-- 宝石合成
+Recipe2("transmute_bluegem", { Ingredient("greengem", 1) }, TECH.NONE,
+    { product = "bluegem", image = "bluegem.tex", description = "transmute_bluegem" })
+Recipe2("transmute_redgem", { Ingredient("bluegem", 1) }, TECH.NONE,
+    { product = "redgem", image = "redgem.tex", description = "transmute_redgem" })
+Recipe2("transmute_purplegem", { Ingredient("redgem", 1) }, TECH.NONE,
+    { product = "purplegem", image = "purplegem.tex", description = "transmute_purplegem" })
+Recipe2("transmute_orangegem", { Ingredient("purplegem", 1) }, TECH.NONE,
+    { product = "orangegem", image = "orangegem.tex", description = "transmute_orangegem" })
+Recipe2("transmute_yellowgem", { Ingredient("orangegem", 1) }, TECH.NONE,
+    { product = "yellowgem", image = "yellowgem.tex", description = "transmute_yellowgem" })
+Recipe2("transmute_greengem", { Ingredient("yellowgem", 1) }, TECH.NONE,
+    { product = "greengem", image = "greengem.tex", description = "transmute_greengem" })
+-- 彩虹宝石
+Recipe2("transmute_opalpreciousgem",
+    { Ingredient("yellowgem", 1), Ingredient("orangegem", 1), Ingredient("greengem", 1), Ingredient("bluegem", 1),
+        Ingredient("redgem", 1), Ingredient("purplegem", 1) }, TECH.NONE,
+    { product = "opalpreciousgem", image = "opalpreciousgem.tex", description = "transmute_opalpreciousgem" })
+-- 活木头合成
 Recipe2("livinglog", { Ingredient("log", 20) }, TECH.NONE,
     { product = "livinglog", image = "livinglog.tex", description = "livinglog" })
+--放开结束
+
+-- 女武神优化 物品制作优化
+Recipe2("spear_wathgrithr", { Ingredient("twigs", 2), Ingredient("flint", 2), Ingredient("goldnugget", 2) }, TECH.NONE,
+    { builder_tag = "valkyrie" })
+Recipe2("wathgrithrhat", { Ingredient("goldnugget", 2), Ingredient("rocks", 2) }, TECH.NONE, { builder_tag = "valkyrie" })
+Recipe2("battlesong_durability",
+    { Ingredient("papyrus", 1), Ingredient("featherpencil", 1), Ingredient("sewing_kit", 1) },
+    TECH.NONE, { builder_tag = "battlesinger" })
+Recipe2("battlesong_healthgain", { Ingredient("papyrus", 1), Ingredient("featherpencil", 1), Ingredient("red_cap", 1) },
+    TECH.NONE, { builder_tag = "battlesinger" })
+Recipe2("battlesong_sanitygain", { Ingredient("papyrus", 1), Ingredient("featherpencil", 1), Ingredient("green_cap", 1) },
+    TECH.NONE, { builder_tag = "battlesinger" })
+Recipe2("battlesong_sanityaura",
+    { Ingredient("papyrus", 1), Ingredient("featherpencil", 1), Ingredient("nightmare_timepiece", 1) }, TECH.NONE,
+    { builder_tag = "battlesinger" })
+Recipe2("battlesong_fireresistance",
+    { Ingredient("papyrus", 1), Ingredient("featherpencil", 1), Ingredient("bluegem", 1) },
+    TECH.NONE, { builder_tag = "battlesinger" })
+Recipe2("battlesong_instant_taunt",
+    { Ingredient("papyrus", 1), Ingredient("featherpencil", 1), Ingredient("tomato", 1, nil, nil, "quagmire_tomato.tex") },
+    TECH.NONE, { builder_tag = "battlesinger" })
+Recipe2("battlesong_instant_panic",
+    { Ingredient("papyrus", 1), Ingredient("featherpencil", 1), Ingredient("purplegem", 1) }, TECH.NONE,
+    { builder_tag = "battlesinger" })
+
+
+-- 增加部分物品 作祟复活
+local respawnThing = { "ccs_amulet", 'ccs_magic_wand3', 'ccs_starstaff', 'ccs_magic_wand2', 'spear_wathgrithr',
+    'spear_wathgrithr_lightning' }
+for i = 1, #respawnThing do
+    AddPrefabPostInit(respawnThing[i], function(inst)
+        if not TheWorld.ismastersim then
+            return inst
+        end
+        if inst.components.hauntable then
+            inst.components.hauntable.DoHaunt = function(self, doer)
+                doer:PushEvent("respawnfromghost", { source = self.inst })
+            end
+        end
+    end)
+end
+
+-- 去除耐久
+AddPrefabPostInit("spear_wathgrithr", function(inst)
+    if not GLOBAL.TheWorld.ismastersim then
+        return
+    end
+    if inst.components.finiteuses then
+        inst:RemoveComponent("finiteuses")
+    end
+end)
+
+-- 女武神属性修改
+TUNING.WATHGRITHR_SANITY = 120
+TUNING.WATHGRITHR_HUNGER = 150
