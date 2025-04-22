@@ -788,11 +788,11 @@ local master_postinit = function(inst)
         inst.soraisplayer:set(count < 5)
     end)
     inst:AddComponent("reader")
-    inst:DoTaskInTime(0.1, function()
-        if inst.components.eater then
-            inst.components.eater.PrefersToEat = soracaneat
-        end
-    end)
+    -- inst:DoTaskInTime(0.1, function()
+    --     if inst.components.eater then
+    --         inst.components.eater.PrefersToEat = soracaneat
+    --     end
+    -- end)
     -- 科技一本
     inst.components.builder.science_bonus = 1
     -- 魔法一本
