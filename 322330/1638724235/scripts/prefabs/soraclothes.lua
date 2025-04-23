@@ -181,6 +181,32 @@ local function onAbsorption(self)
 	return  self:GetPercent() > 0 and self.inst.abs or nil
 end
 
+local function light() --光的代码
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddLight()
+    inst.entity:AddNetwork()
+
+    inst:AddTag("FX") --特效标签
+
+	inst.Light:Enable(true) --打开
+	inst.Light:SetRadius(15) --范围半径
+	inst.Light:SetFalloff(0.5) --削减
+	inst.Light:SetIntensity(0.8) --强度
+	inst.Light:SetColour(180 / 255, 195 / 255, 150 / 255) --颜色
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+	
+    inst.persists = false 
+	
+    return inst
+end 
+
 local function fn()
     local inst = CreateEntity()
 
@@ -262,6 +288,10 @@ local function fn()
 	--移速
 	inst.components.equippable.walkspeedmult = math.min(getsora("soraclothesspe"),2.5)
 	
+	-- 增加背包同款发光
+	inst._light = SpawnPrefab("soraclotheslight")
+	inst._light.entity:SetParent(inst.entity)
+
 	inst.need = TUNING.SORAMODE/2
 	inst.maxlevel = 10
 	inst.mpnum = 0
@@ -282,4 +312,5 @@ local function fn()
     return inst
 end
 
-return Prefab("soraclothes", fn, assets)
+return Prefab("soraclothes", fn, assets),
+		Prefab("soraclotheslight", light)
