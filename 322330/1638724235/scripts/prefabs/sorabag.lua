@@ -266,6 +266,10 @@ local function fn()
     inst:AddTag("trader")
     inst:AddTag("soratrader")
     inst:AddTag("waterproofer")
+    
+    -- 增加发光
+	inst._light = SpawnPrefab("soraclotheslight")
+	inst._light.entity:SetParent(inst.entity)
 
     -- waterproofer (from waterproofer component) added to pristine state for optimization
 
